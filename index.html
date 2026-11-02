@@ -1315,7 +1315,7 @@ body.is-auth .view { padding: 0; }
   ];
 
   const shop = {
-    window: { name: 'Ноябрьское окно', capacity: '2,08 млн ₽', used: 0.62, closes: '30 ноября' },
+    window: { name: 'Ноябрьское окно', capacity: '2,25 млн ₽', used: 0.62, closes: '30 ноября' },
     kits: [
       { id: 'kit-cap', name: 'Кепка + образ', price: 2500, limit: 30, left: 18, twin: 'otp-cap', slot: 'hat', sizes: ['One size'], desc: 'Лаймовая кепка с вышивкой «отп» и её цифровой двойник' },
       { id: 'kit-tee', name: 'Футболка + образ', price: 5000, limit: 30, left: 11, twin: 'otp-tee', slot: 'top', sizes: ['XS', 'S', 'M', 'L', 'XL', 'XXL'], desc: 'Хлопковая футболка лаймового цвета и её цифровой двойник' },
@@ -1350,14 +1350,13 @@ body.is-auth .view { padding: 0; }
     ],
     experiences: [
       { id: 'ex-expert', name: 'Встреча с экспертом банка', price: 2000, note: 'Добровольно, 45 минут, тема на ваш выбор' },
-      { id: 'ex-lunch', name: 'Обед с командой другого направления', price: 3000, note: 'Знакомство с коллегами и их задачами' },
     ],
     // Аукцион уникального опыта: тратит коины без денег из бюджета наград
     auction: [
       { id: 'au-cube', name: 'Кубик Рубика ОТП', note: 'Лимитированный, в цветах офисов CareTech', bid: 4200, step: 300, hours: 30, best: true },
       { id: 'au-park', name: 'Парковка у офиса на месяц', bid: 6500, step: 500, hours: 20 },
-      { id: 'au-strat', name: 'Место на стратсессии банка', note: 'Только за РуКоины: послушать правление и задать вопрос', bid: 9000, step: 500, hours: 52, cur: 'ru' },
-      { id: 'au-lunch', name: 'Обед с членом правления', note: 'Только за РуКоины: час разговора о карьере и банке', bid: 12000, step: 1000, hours: 75, cur: 'ru' },
+      { id: 'au-strat', name: 'Место на стратсессии банка', note: 'Послушать правление и задать вопрос', bid: 9000, step: 500, hours: 52, cur: 'ru' },
+      { id: 'au-lunch', name: 'Обед с членом правления', note: 'Час разговора о карьере и банке', bid: 12000, step: 1000, hours: 75, cur: 'ru' },
       { id: 'au-room', name: 'Назвать переговорку', bid: 5000, step: 500, hours: 44 },
       { id: 'au-brand', name: 'Сняться в бренд-кампании', bid: 8000, step: 500, hours: 96 },
     ],
@@ -1434,7 +1433,7 @@ body.is-auth .view { padding: 0; }
       { id: 'rv3', who: 'roman', cat: 'enjoyment', title: 'Квиз-пятница для отдела', text: 'Провёл квиз про продукты банка для четырёх команд.', by: 'polina', parts: ['roman', 'polina'], ago: 5, suggest: 'help' },
     ],
     // Peer-бонусы, которые ждут подтверждения руководителя получателя
-    peers: [{ id: 'pq1', from: 'polina', to: 'anna', note: 'Разобрала с нами гайд по данным', ago: 1 }],
+    peers: [],
   };
 
   // Сводка программы для администратора: прогноз на 10-й месяц 2027 года по финансовой модели решения.
@@ -1442,20 +1441,20 @@ body.is-auth .view { padding: 0; }
   const admin = {
     year: 2027,
     month: 10,
-    kpi: { coverage: 41, coverageBase: 31, median: 6, csi: 4.71, csiGoal: 4.85, onTime: 96, er: 72, erBase: 68, erGoal: 75 },
-    managers: { total: 315, active: 248, tiers: [['Вдохновляю', 34], ['Поддерживаю', 71], ['Замечаю', 102], ['Ниже 60', 108]], pool: 1.6, poolMax: 2.5 },
-    budget: { total: 33, shop: 25, events: 8, paid: 18.7, orders: 0.9, evUsed: 1.8 },
-    window: { name: 'Ноябрьское окно', cap: 2.08, used: 0.62, queue: 214 },
-    stock: { start: 32, now: 22.3, target: 20.8 },
+    kpi: { coverage: 45, coverageBase: 31, median: 8, csi: 4.79, csiGoal: 4.85, onTime: 96, er: 72, erBase: 68, erGoal: 75 },
+    managers: { total: 315, active: 205, tiers: [['Вдохновляю', 32], ['Поддерживаю', 79], ['Замечаю', 94], ['Ниже 60', 110]], pool: 7.6, poolMax: 8.3 },
+    budget: { total: 33, shop: 27, events: 6, paid: 22.5, orders: 0.9, evUsed: 5.0 },
+    window: { name: 'Ноябрьское окно', cap: 2.25, used: 0.62, queue: 214 },
+    stock: { start: 32, now: 25.1, target: 24.4 },
     funds: 4.1,
-    emission: [['Фонды руководителей', 46.7, 56], ['Центральный фонд: peer-бонусы, индекс, «Выбор коллег»', 11.7, 14], ['Стаж, важные даты и «Первые шаги»', 16.8, 25], ['Фонд командных инициатив', 3.4, 5]],
-    sim: { p: 10, e: 25, v: 10, prem: 10, shop: 25, rush: 0 },
+    emission: [['Фонды руководителей', 77, 84], ['«Выбор коллег»: команды, подразделения, банк', 59.9, 65.4], ['Индекс признания руководителей', 7.6, 8.3], ['Стаж, важные даты и «Первые шаги»', 18.5, 20.2]],
+    pool: { name: 'Пул признания: запросы команд', used: 3.4, limit: 12 },
+    sim: { p: 15, e: 30, v: 10, prem: 10, shop: 27, tc: 100 },
     signals: [
       { id: 'sg1', who: ['pavel', 'ildar'], title: 'Встречные переводы', text: '6 переводов Коинов в паре за месяц', detail: 'Павел и Ильдар шесть раз за месяц перевели друг другу одинаковые суммы.' },
       { id: 'sg2', who: ['ruslan'], title: 'Всплеск в конце месяца', text: '72% фонда за последние 3 дня', detail: 'Руслан выдал почти весь месячный фонд в последние три дня месяца.' },
       { id: 'sg3', who: ['artem'], title: 'Узкий круг', text: '80% наград — двум сотрудникам', detail: 'За 3 месяца 80% наград Артёма получили два человека из команды в 14 сотрудников.' },
     ],
-    requestRules: 'Ценность и измеримый результат · до 50 000 · решение за 5 дней · отчёт после',
     requestMax: 50000,
     requests: [
       { id: 'rq1', from: 'natalia', team: 'Контактный центр · Ростов', amount: 20000, what: '12 новичков прошли испытательный срок с наставниками' },
@@ -1497,7 +1496,6 @@ body.is-auth .view { padding: 0; }
   const accounts = [
     {
       id: 'egor', person: 'egor', login: 'e.krylov@otp-demo', badge: 'Руководитель', since: 3,
-      about: 'Наградил аналитика за гайд. Видит индекс признания и кого давно не отмечали',
       canManage: true, team: teamIds, managerId: 'irina',
       start: {
         coin: 6850, ru: 3500, streak: 12, game: 840, petName: 'Пиксель', growth: 26, owned: ['glasses:sun'],
@@ -1528,7 +1526,6 @@ body.is-auth .view { padding: 0; }
     },
     {
       id: 'timur', person: 'timur', login: 't.ibragimov@otp-demo', badge: 'Стажёр', since: 0,
-      about: 'Первые недели и нулевой баланс — но открытка от команды и первая награда',
       canManage: false, team: teamOf('timur'), managerId: 'egor',
       start: { coin: 0, ru: 0, streak: 2, game: 0, petName: 'Бублик', growth: 4, owned: [], pending: [], history: [], orders: [] },
       tools: [
@@ -1541,12 +1538,11 @@ body.is-auth .view { padding: 0; }
     },
     {
       id: 'anna', person: 'anna', login: 'a.smirnova@otp-demo', badge: 'Аналитик · вклад месяца', since: 4,
-      about: 'Тот самый аналитик с гайдом: «Выбор коллег», мерч с цифровым двойником',
       canManage: false, team: teamOf('anna'), managerId: 'egor', winner: true,
       start: {
         coin: 18400, ru: 2000, streak: 21, game: 1055, petName: 'Запятая', growth: 48, owned: ['top:otp-tee', 'extra:headphones'],
         pending: [
-          { id: 'pa1', kind: 'award', src: 'Выбор коллег', tier: '«Выбор коллег» · Learning', amount: 25000, cur: 'ru', from: 'olga', cat: 'learning', text: 'Вклад месяца: «Гайд по данным для всего стрима»', ago: 0, room: 'gallery' },
+          { id: 'pa1', kind: 'award', src: 'Выбор коллег', tier: '«Выбор коллег» · подразделение · Learning', amount: 10000, cur: 'coin', from: 'olga', cat: 'learning', text: 'Лучший вклад подразделения: «Гайд по данным для всего стрима»', ago: 0, room: 'gallery' },
         ],
         history: [
           { id: 'ha1', ago: 9, title: 'Улучшение: гайд по выгрузке из хранилища', src: 'От руководителя', amt: 2500, cur: 'ru' },
@@ -1569,7 +1565,6 @@ body.is-auth .view { padding: 0; }
     },
     {
       id: 'eva', person: 'eva', login: 'e.koroleva@otp-demo', badge: 'HR · администратор', since: 5,
-      about: 'Бюджет и обязательства программы, сигналы, запросы команд и симулятор экономики',
       canManage: false, canAdmin: true, team: ['olga'], managerId: null,
       start: {
         coin: 4200, ru: 0, streak: 6, game: 0, petName: 'Сальдо', growth: 18, owned: [],
@@ -1636,10 +1631,9 @@ body.is-auth .view { padding: 0; }
   const supportEvents = [
     { id: 'event-kazan', from: 'eva', title: 'Командная поездка в Казань', type: 'trip', purpose: 'Встреча региональных сообществ и обмен опытом', city: 'Казань', date: '2026-12-12', costRub: 1000, seats: 20, price: 10000, status: 'approved', organizer: 'ОТП Банк', used: 0 },
   ];
-  const sop = { max: 6000, pool: 2500000, curatorScore: 87 };
+  const sop = { max: 6000, pool: 8300000, curatorScore: 87 };
   accounts.push({
     id: 'irina', person: 'irina', login: 'i.kovaleva@otp-demo', badge: 'Директор · N+1', since: 6,
-    about: 'Подтверждает награды куратору и руководителю по оценке в реестре СОП',
     canManage: false, canAdmin: true, canApproveSop: true, team: ['egor', 'eva'], managerId: null,
     start: { coin: 8000, ru: 0, streak: 4, game: 0, petName: 'Компас', growth: 16, owned: [], pending: [], history: [], orders: [] },
     tools: [], notifs: [{ id: 'n-sop', ic: 'shield', go: '#/admin', ago: 0, text: 'Оценки руководителя и куратора готовы к подтверждению' }],
@@ -3189,11 +3183,11 @@ body.is-auth .view { padding: 0; }
       const fs = s.firstSteps || (s.firstSteps = { quiz: 0, claimed: false });
       const meaningful = (t) => clean(t.what).length >= 12 && clean(t.help).length >= 12;
       const list = [
-        { id: 'profile', title: 'Собрать аватар и профиль', hint: 'Образ, интересы и кто видит твои благодарности', done: !!s.onboarded, act: 'onboarding', cta: 'Открыть' },
-        { id: 'thanks', title: 'Сказать первое содержательное «спасибо»', hint: 'Что сделал коллега и чем это помогло — от 12 символов в каждом поле', done: s.thanks.some(meaningful), act: 'thank', cta: 'Поблагодарить' },
-        { id: 'quiz', title: 'Пройти квиз «Как устроена ОТП Мания»', hint: '5 вопросов о правилах, нужно 4 верных ответа', done: (fs.quiz || 0) >= 4, act: 'stepsQuiz', cta: 'Пройти квиз' },
-        { id: 'vote', title: 'Отдать голос в номинации команды', hint: 'Пул — вся команда, голос с причиной', done: Object.keys(D.cats).some((c) => store.myTeamVote(c)), act: 'teamVote', cta: 'Голосовать' },
-        { id: 'mentor', title: 'Записаться на встречу с наставником', hint: 'Академия в офисе: выбери тему', done: s.mentors.length > 0, act: 'zone', zone: 'academy', cta: 'Записаться' },
+        { id: 'profile', title: 'Собрать аватар и профиль',  done: !!s.onboarded, act: 'onboarding', cta: 'Открыть' },
+        { id: 'thanks', title: 'Сказать первое содержательное «спасибо»', hint: 'От 12 символов в каждом поле', done: s.thanks.some(meaningful), act: 'thank', cta: 'Поблагодарить' },
+        { id: 'quiz', title: 'Пройти квиз «Как устроена ОТП Мания»',  done: (fs.quiz || 0) >= 4, act: 'stepsQuiz', cta: 'Пройти квиз' },
+        { id: 'vote', title: 'Отдать голос в номинации команды',  done: Object.keys(D.cats).some((c) => store.myTeamVote(c)), act: 'teamVote', cta: 'Голосовать' },
+        { id: 'mentor', title: 'Записаться на встречу с наставником',  done: s.mentors.length > 0, act: 'zone', zone: 'academy', cta: 'Записаться' },
       ];
       const done = list.filter((x) => x.done).length;
       return { list, done, total: list.length, claimed: !!fs.claimed, newcomer: OM.account.since === 0, coins: D.firstSteps.coins };
@@ -4989,9 +4983,9 @@ body.is-auth .view { padding: 0; }
         <label class="field"><span class="field-label">За какое действие</span><textarea class="input" data-in="what" rows="2" placeholder="Что именно сделал коллега">${esc(st.what)}</textarea><span class="field-error" data-err="what" hidden></span></label>
         <label class="field"><span class="field-label">Чем помогло</span><textarea class="input" data-in="help" rows="2" placeholder="Польза для команды или клиентов">${esc(st.help)}</textarea><span class="field-error" data-err="help" hidden></span></label>
         <div class="field"><span class="field-label">Ценность банка</span><div class="chips chip-w" data-part="cat">${catChips(st.cat)}</div><span class="field-error" data-err="cat" hidden></span></div>
-        <div class="field"><span class="field-label">Кто увидит</span><div class="seg" data-part="vis">${[['public', 'Все'], ['team', 'Команда'], ['private', 'Лично']].map(([v, n]) => `<button type="button" class="${st.vis === v ? 'on' : ''}" data-vis="${v}">${n}</button>`).join('')}</div><span class="small muted">Если получатель скрыл свои благодарности, она останется личной</span></div>
+        <div class="field"><span class="field-label">Кто увидит</span><div class="seg" data-part="vis">${[['public', 'Все'], ['team', 'Команда'], ['private', 'Лично']].map(([v, n]) => `<button type="button" class="${st.vis === v ? 'on' : ''}" data-vis="${v}">${n}</button>`).join('')}</div></div>
       </div>
-      <div class="modal-foot"><button class="btn btn-primary btn-lg" data-send>${OM.icon('send', 18)} Отправить</button><span class="small muted via" style="align-self:center">${OM.icon('chat', 16)} или /спасибо в рабочем чате</span></div>`;
+      <div class="modal-foot"><button class="btn btn-primary btn-lg" data-send>${OM.icon('send', 18)} Отправить</button></div>`;
     const toPart = () => (st.to
       ? chosenHtml(OM.person(st.to), 'data-change')
       : `<div class="search"><input class="input" data-in="q" placeholder="Имя или команда" value="${esc(st.q)}" autofocus>${OM.icon('search', 18)}</div><div class="picker mt-8" data-part="list">${pickerHtml(st.q)}</div>`);
@@ -5044,7 +5038,7 @@ body.is-auth .view { padding: 0; }
   A.teamVote = A.nominate = (ds) => {
     if (OM.state.stage !== 'nominations') { location.hash = '#/vote'; OM.toast('Голосование в команде идёт с 1 по 10 число — откройте этап «Выбор в команде»', { icon: 'info' }); return; }
     const pool = OM.store.teamPool();
-    if (ds && ds.who && !pool.includes(ds.who)) { OM.toast('В номинациях голосуют за коллег из своей команды. Вклад других команд отметьте peer-бонусом', { icon: 'info' }); return; }
+    if (ds && ds.who && !pool.includes(ds.who)) { OM.toast('В номинациях голосуют за коллег из своей команды. Вклад коллег из других команд отметьте «спасибо»', { icon: 'info' }); return; }
     const st = { who: (ds && ds.who) || null, cat: (ds && ds.cat) || '', why: '' };
     const poolHtml = () => pool.map((id) => { const p = OM.person(id); return `<button type="button" class="pool-p ${st.who === id ? 'on' : ''}" data-pick="${id}">${OM.ava(p, 40, { title: false })}<span>${esc(OM.firstName(p))}</span></button>`; }).join('');
     OM.modal.open({
@@ -5052,7 +5046,6 @@ body.is-auth .view { padding: 0; }
       label: 'Голос в номинации',
       html: () => `
         <div class="modal-title">Голос в номинации</div>
-        <p class="modal-sub">Пул — вся команда. Голос тайный, за себя голосовать нельзя. Изменить можно до 10-го числа.</p>
         <div class="modal-body col" style="gap:18px">
           <div class="field"><span class="field-label">Номинация</span><div class="chips chip-w" data-part="cat">${catChips(st.cat)}</div><span class="field-error" data-err="cat" hidden></span></div>
           <div class="field"><span class="field-label">Коллега</span><div class="pool" data-part="who">${poolHtml()}</div><span class="field-error" data-err="who" hidden></span></div>
@@ -5077,7 +5070,7 @@ body.is-auth .view { padding: 0; }
             render(`<div style="text-align:center;padding:8px 0">
               <div class="pop" style="display:inline-block">${OM.ava(p, 96)}</div>
               <div class="modal-title mt-16" style="padding:0">Голос учтён</div>
-              <p class="lead mt-8">${esc(D.cats[st.cat].name)} · ${esc(p.name)}. Голос видите только вы</p>
+              <p class="lead mt-8">${esc(D.cats[st.cat].name)} · ${esc(p.name)}</p>
               <div class="modal-foot" style="justify-content:center"><button class="btn btn-primary" data-close>Хорошо</button><a class="btn btn-secondary" href="#/vote" data-close>Все номинации</a></div></div>`);
           }
         });
@@ -5193,8 +5186,8 @@ body.is-auth .view { padding: 0; }
       return `<div class="grid g-3" style="gap:10px">
         <div class="stat" style="background:var(--surface)"><div class="stat-v">${OM.money(tr.amount, 'ru', 20)}</div><div class="stat-l">В фонде останется ${OM.fmt(Math.max(0, left))}</div></div>
         <div class="stat" style="background:var(--surface)"><div class="stat-v">${Math.round(Math.min(1,(cov.covered + (willCover ? 1 : 0))/cov.total)*100)}%</div><div class="stat-l">Кого заметили за месяц</div></div>
-        <div class="stat" style="background:var(--lime)"><div class="stat-v">${after.value}</div><div class="stat-l">Индекс · не зависит от суммы</div></div>
-      </div><p class="small mt-8">${OM.isTeam(who) ? 'Содержательное признание засчитается в охват ✓' : 'Коллега из другой команды получит награду из вашего фонда'}</p>${left < 0 ? '<p class="small mt-8" style="color:#B3261E">Не хватает фонда</p>' : ''}`;
+        <div class="stat" style="background:var(--lime)"><div class="stat-v">${after.value}</div><div class="stat-l">Индекс</div></div>
+      </div>${left < 0 ? '<p class="small mt-8" style="color:#B3261E">Не хватает фонда</p>' : ''}`;
     };
     const tiers = () => D.awardTiers.map((t) => `<button type="button" class="tier-opt ${st.tier === t.id ? 'on' : ''}" data-tier="${t.id}"><span class="small muted">${t.name}</span><b>${OM.fmt(t.amount)} ${OM.coin('ru', 20)}</b></button>`).join('');
     OM.modal.open({
@@ -5291,7 +5284,7 @@ body.is-auth .view { padding: 0; }
           <div class="col">
             <p>${esc(kit.desc)}</p>
             <div class="h3">${OM.money(kit.price, 'coin', 26)}</div>
-            <div class="small muted">Осталось ${OM.stockOf(kit.id)} · взносы в ваш вишлист учтены</div>
+            <div class="small muted">Осталось ${OM.stockOf(kit.id)}</div>
             ${bal() < kit.price ? `<div class="try-note" style="background:var(--warn-2)">${OM.icon('info', 18)}<span>Не хватает ${OM.fmt(kit.price - bal())} ${OM.curName('coin', kit.price - bal())}</span></div>` : ''}
           </div></div>
         <div class="modal-foot"><button class="btn btn-primary btn-lg" data-next ${bal() < kit.price ? 'disabled' : ''}>Дальше</button></div>`,
@@ -5548,14 +5541,14 @@ body.is-auth .view { padding: 0; }
       }
     });
   }
-  A.transfer = (ds = {}) => form('Поделиться Коинами', `<p class="modal-sub">Подарок из вашего баланса. Доступно ${OM.fmt(OM.state.balance.coin)} Коинов, остаток лимита на месяц — ${OM.fmt(OM.store.giftLeft())}.</p>${people(ds.to)}${field('Коины', 'amount', 'type="number" min="1" step="1" required', '100')}${note()}`, d => OM.store.transfer(d.to, +d.amount, d.note) ? { ok: true, message: 'Подарок отправлен. Коллега заберёт его в бонусах' } : 'Недостаточно Коинов или превышен лимит переводов');
+  A.transfer = (ds = {}) => form('Поделиться Коинами', `<p class="modal-sub">Доступно ${OM.fmt(OM.state.balance.coin)} Коинов, остаток лимита на месяц — ${OM.fmt(OM.store.giftLeft())}</p>${people(ds.to)}${field('Коины', 'amount', 'type="number" min="1" step="1" required', '100')}${note()}`, d => OM.store.transfer(d.to, +d.amount, d.note) ? { ok: true, message: 'Подарок отправлен. Коллега заберёт его в бонусах' } : 'Недостаточно Коинов или превышен лимит переводов');
   A.setWish = (ds) => {
     const result = OM.store.setWish(ds.id);
     OM.toast(result === false ? 'Сначала используйте уже собранные Коины' : 'Желание видно в вашем профиле', { icon: 'gift' });
   };
   A.chipWish = (ds) => {
     const w = OM.wishOf(ds.owner); if (!w) return;
-    form('Скинуться на желание', `<p class="modal-sub">${esc(w.kitObj.name)} · ${esc(OM.person(ds.owner).name)}. Собрано ${OM.fmt(w.got)} из ${OM.fmt(w.kitObj.price)} Коинов. Взнос закрепляется за этим подарком.</p>${field('Ваш взнос', 'amount', 'type="number" min="1" step="1" required', '100')}${note()}`, d => OM.store.chip(ds.owner, +d.amount, d.note) ? { ok: true, message: 'Взнос добавлен в вишлист' } : 'Проверьте баланс, лимит перевода и оставшуюся сумму желания');
+    form('Скинуться на желание', `<p class="modal-sub">${esc(w.kitObj.name)} · ${esc(OM.person(ds.owner).name)}. Собрано ${OM.fmt(w.got)} из ${OM.fmt(w.kitObj.price)} Коинов</p>${field('Ваш взнос', 'amount', 'type="number" min="1" step="1" required', '100')}${note()}`, d => OM.store.chip(ds.owner, +d.amount, d.note) ? { ok: true, message: 'Взнос добавлен в вишлист' } : 'Проверьте баланс, лимит перевода и оставшуюся сумму желания');
   };
   // Подписать открытку: пожелание и, по желанию, Коины из своего баланса
   const signForm = (owner) => {
@@ -5599,23 +5592,23 @@ body.is-auth .view { padding: 0; }
       },
     });
   };
-  A.peerBonus = (ds = {}) => form('Номинировать на peer-бонус', `<p class="modal-sub">1 000 Коинов из общего фонда. Раз в квартал; руководитель получателя подтверждает конкретный вклад. Взаимные номинации недоступны 6 месяцев.</p>${people(ds.to)}${note('Что сделал коллега и чем это помогло', 'note', true)}`, d => {
+  A.peerBonus = (ds = {}) => form('Номинировать на peer-бонус', `<p class="modal-sub">1 000 Коинов · раз в квартал</p>${people(ds.to)}${note('Что сделал коллега и чем это помогло', 'note', true)}`, d => {
     if (d.note.trim().length < 12) return 'Опишите действие и пользу — не менее 12 символов';
     const reason = OM.store.peerCheck(d.to); if (reason) return reason;
     return OM.store.peer(d.to, d.note) ? { ok: true, message: 'Peer-бонус отправлен руководителю получателя' } : 'Не удалось отправить номинацию';
   });
-  A.supportRequest = () => form('Поддержка мероприятия от ОТП', `<p class="modal-sub">Предложите совместную поездку или мероприятие. HR проверит бюджет и организацию за 5 рабочих дней. После одобрения сотрудники бронируют билеты за Коины: 1 ₽ стоимости = 10 Коинов. Накопленные Коины не сгорают.</p><label class="field mt-16"><span class="field-label">Формат</span><select class="input" name="type"><option value="event">Мероприятие</option><option value="trip">Поездка</option></select></label>${field('Название', 'title', 'required minlength="4" maxlength="120"')}${note('Польза для команды и план мероприятия', 'purpose', true)}<div class="grid g-2">${field('Город', 'city', 'required maxlength="80"')}${field('Дата', 'date', 'type="date" required')}</div><div class="grid g-2">${field('Стоимость на человека, ₽', 'costRub', 'type="number" min="1" max="50000" step="1" required')}${field('Количество мест', 'seats', 'type="number" min="1" max="100" step="1" required', '10')}</div>`, d => {
+  A.supportRequest = () => form('Поддержка мероприятия от ОТП', `<p class="modal-sub">HR проверит бюджет и организацию за 5 рабочих дней</p><label class="field mt-16"><span class="field-label">Формат</span><select class="input" name="type"><option value="event">Мероприятие</option><option value="trip">Поездка</option></select></label>${field('Название', 'title', 'required minlength="4" maxlength="120"')}${note('Польза для команды и план мероприятия', 'purpose', true)}<div class="grid g-2">${field('Город', 'city', 'required maxlength="80"')}${field('Дата', 'date', 'type="date" required')}</div><div class="grid g-2">${field('Стоимость на человека, ₽', 'costRub', 'type="number" min="1" max="50000" step="1" required')}${field('Количество мест', 'seats', 'type="number" min="1" max="100" step="1" required', '10')}</div>`, d => {
     const r = OM.store.requestEvent({ ...d, costRub: +d.costRub, seats: +d.seats });
     return r.ok ? { ok: true, message: 'Запрос отправлен HR. Статус — в магазине' } : r;
   });
   A.bookSupport = (ds) => {
     const event = OM.store.eventTickets().find(x => x.id === ds.id); if (!event) return;
     const price = event.price || event.costRub * 10;
-    form('Забронировать билет', `<p class="modal-sub">${esc(event.title)} · ${esc(event.city)} · ${esc(event.date)}</p><div class="list mt-16"><div class="list-item"><span class="grow">Билет</span>${OM.money(price, 'coin', 22)}</div></div><p class="small muted mt-16">1 ₽ = 10 Коинов. ОТП организует мероприятие. Коины резервируются до выдачи билета; отмена до выдачи возвращает всю сумму.</p>`, () => OM.store.orderEvent(ds.id) ? { ok: true, message: 'Билет в ваших заказах' } : 'Недостаточно Коинов, мест или у вас уже есть билет', 'Забронировать');
+    form('Забронировать билет', `<p class="modal-sub">${esc(event.title)} · ${esc(event.city)} · ${esc(event.date)}</p><div class="list mt-16"><div class="list-item"><span class="grow">Билет</span>${OM.money(price, 'coin', 22)}</div></div><p class="small muted mt-16">Отмена до выдачи возвращает всю сумму</p>`, () => OM.store.orderEvent(ds.id) ? { ok: true, message: 'Билет в ваших заказах' } : 'Недостаточно Коинов, мест или у вас уже есть билет', 'Забронировать');
   };
   A.community = (ds) => {
     const c = D.shop.communities.find(x => x.id === ds.id); if (!c) return;
-    form('Поддержать сообщество', `<p class="modal-sub">${esc(c.name)}. Банк организует событие из бюджета мероприятий при достижении цели.</p>${field('Взнос в Коинах', 'amount', 'type="number" min="1" step="1" required', '100')}`, d => OM.store.community(ds.id, +d.amount) ? { ok: true, message: 'Взнос учтён в сборе сообщества' } : 'Проверьте баланс и оставшуюся сумму сбора');
+    form('Поддержать сообщество', `<p class="modal-sub">${esc(c.name)}</p>${field('Взнос в Коинах', 'amount', 'type="number" min="1" step="1" required', '100')}`, d => OM.store.community(ds.id, +d.amount) ? { ok: true, message: 'Взнос учтён в сборе сообщества' } : 'Проверьте баланс и оставшуюся сумму сбора');
   };
   A.bid = (ds) => {
     const l = OM.lot(ds.id); if (!l) return;
@@ -5650,7 +5643,7 @@ body.is-auth .view { padding: 0; }
   };
   A.settings = () => {
     const settings = [['classic', 'Классический вид · без офиса, питомца и игры'], ['quiet', 'Тихий режим'], ['noConfetti', 'Без конфетти'], ['noStreak', 'Скрыть серии'], ['vacation', 'Отпуск или больничный · заморозить серии']];
-    form('Мой ритм', `<p class="modal-sub">Игра — опция: в классическом виде всё то же самое, только без игрового слоя. Питомец сохраняет рост во время отсутствия, отдых не уменьшает баланс.</p>${settings.map(([k,t]) => `<label class="check mt-16"><input type="checkbox" name="${k}" ${OM.state.prefs[k] ? 'checked' : ''}><span>${t}</span></label>`).join('')}<label class="field mt-16"><span class="field-label">Кто видит ваши благодарности</span><select class="input" name="publicity">${[['public', 'Все'], ['team', 'Команда'], ['private', 'Только я']].map(([v, n]) => `<option value="${v}" ${OM.state.publicity === v ? 'selected' : ''}>${n}</option>`).join('')}</select></label>`, d => { const patch = {}; settings.forEach(([k]) => patch[k] = d[k] === 'on'); OM.state.publicity = d.publicity || OM.state.publicity; OM.store.setPrefs(patch); setTimeout(() => window.dispatchEvent(new HashChangeEvent('hashchange')), 0); return { ok: true, message: 'Настройки сохранены' }; }, 'Сохранить');
+    form('Мой ритм', `${settings.map(([k,t]) => `<label class="check mt-16"><input type="checkbox" name="${k}" ${OM.state.prefs[k] ? 'checked' : ''}><span>${t}</span></label>`).join('')}<label class="field mt-16"><span class="field-label">Кто видит ваши благодарности</span><select class="input" name="publicity">${[['public', 'Все'], ['team', 'Команда'], ['private', 'Только я']].map(([v, n]) => `<option value="${v}" ${OM.state.publicity === v ? 'selected' : ''}>${n}</option>`).join('')}</select></label>`, d => { const patch = {}; settings.forEach(([k]) => patch[k] = d[k] === 'on'); OM.state.publicity = d.publicity || OM.state.publicity; OM.store.setPrefs(patch); setTimeout(() => window.dispatchEvent(new HashChangeEvent('hashchange')), 0); return { ok: true, message: 'Настройки сохранены' }; }, 'Сохранить');
   };
   // Полноэкранные сторис для «Моего года» и открытки: свайп, тап по краям, стрелки, автолистание с паузой
   const stories = (cards, opts) => {
@@ -5811,12 +5804,12 @@ body.is-auth .view { padding: 0; }
         <div class="yr-eyebrow yr-a">«Выбор коллег»</div>
         <div class="yr-medal yr-a2"><span>${OM.icon('trophy', 60, 1.8)}</span>${OM.ava(me, 104, { title: false })}</div>
         <div class="yr-title yr-a3">Ты — «Вклад месяца»</div>
-        <div class="yr-sub">Голоса команды, финал банка, +${OM.fmt(25000)} РуКоинов, мантия и титул на месяц</div>`]
+        <div class="yr-sub">Голоса команды и финал подразделения: +${OM.fmt(10000)} Коинов, мантия и титул на месяц</div>`]
         : ['violet', `${ring('right:-90px;top:120px')}
         <div class="yr-eyebrow yr-a">«Выбор коллег»</div>
         <div class="yr-title yr-a2">Голоса года</div>
         <div class="yr-big yr-a3">${num(votes)}</div>
-        <div class="yr-sub">${OM.plural(votes, ['голос', 'голоса', 'голосов'])} — ты ${v('выбирал', 'выбирала')} «Вклад месяца» в команде и в банке</div>`],
+        <div class="yr-sub">${OM.plural(votes, ['голос', 'голоса', 'голосов'])} — ты ${v('выбирал', 'выбирала')} лучший вклад в команде и в подразделении</div>`],
       ['lime', `${ring('right:-90px;top:60px')}
         <div class="yr-eyebrow yr-a">${yr}</div>
         <div class="yr-title yr-a2">Спасибо, что ты с нами</div>
@@ -5831,22 +5824,20 @@ body.is-auth .view { padding: 0; }
   };
   A.completeTask = (ds) => {
     const task = OM.store.tasks().find(t => t.id === ds.id); if (!task) return;
-    form('Подтвердить результат задачи', `<p class="modal-sub">${esc(task.title)}. Награда ${OM.fmt(task.amount)} РуКоинов закреплена по гайдбуку; начисление после проверки руководителем.</p>${note('Что сделано, эффект и ссылка на результат', 'evidence', true)}`, d => OM.store.completeTask(ds.id, d.evidence), 'На проверку');
+    form('Подтвердить результат задачи', `<p class="modal-sub">${esc(task.title)}. Награда ${OM.fmt(task.amount)} РуКоинов — после проверки руководителем</p>${note('Что сделано, эффект и ссылка на результат', 'evidence', true)}`, d => OM.store.completeTask(ds.id, d.evidence), 'На проверку');
   };
   A.giftSize = (ds) => {
     const order = OM.state.orders.find(o => o.id === ds.id && o.status === 'size'); if (!order) return;
     const kit = D.shop.kits.find(k => k.id === order.ref);
     const sizes = kit ? kit.sizes : ['XS', 'S', 'M', 'L', 'XL', 'XXL'];
-    form('Выберите размер подарка', `<p class="modal-sub">${esc(order.name)}. Комплект оплачен коллегой. Цифровой двойник появится в вашем гардеробе.</p><label class="field mt-20"><span class="field-label">Ваш размер</span><select class="input" name="size">${sizes.map(s => `<option>${esc(s)}</option>`).join('')}</select></label>`, d => OM.store.receiveGift(ds.id, d.size) ? { ok: true, message: 'Подарок получен, образ открыт в гардеробе' } : 'Не удалось получить подарок', 'Получить подарок');
+    form('Выберите размер подарка', `<p class="modal-sub">${esc(order.name)}</p><label class="field mt-20"><span class="field-label">Ваш размер</span><select class="input" name="size">${sizes.map(s => `<option>${esc(s)}</option>`).join('')}</select></label>`, d => OM.store.receiveGift(ds.id, d.size) ? { ok: true, message: 'Подарок получен, образ открыт в гардеробе' } : 'Не удалось получить подарок', 'Получить подарок');
   };
   // Регионы: офис — это весь банк, а не только Москва
   A.regions = () => {
     const far = OM.everyone().filter((p) => p.id !== 'me' && p.city && p.city !== 'Москва').slice(0, 6);
     OM.modal.open({ size: 'wide', label: 'Регионы', html: `<div class="modal-title">Регионы: офис — это весь банк</div>
-      <p class="modal-sub">800 населённых пунктов, 57 000 точек потребкредитования и офисы CareTech в стиле кубика Рубика. Сеть — не гость в московском офисе.</p>
       <div class="grid g-3 mt-20"><div class="stat"><div class="stat-v">800</div><div class="stat-l">населённых пунктов</div></div><div class="stat"><div class="stat-v">57 000</div><div class="stat-l">точек потребкредитования</div></div><div class="stat"><div class="stat-v">1 раз в месяц</div><div class="stat-l">сборная отправка мерча в офис</div></div></div>
       <div class="list mt-20">${far.map((p) => `<div class="list-item">${OM.ava(p, 40)}<div class="grow"><b style="font-weight:500">${esc(p.name)}</b><div class="small muted">${esc(p.city)} · ${esc(p.role)}</div></div><a class="btn btn-sm btn-secondary" href="#/profile/${p.id}" data-close>Профиль</a></div>`).join('')}</div>
-      <p class="small muted mt-16">Сертификаты в регионах приходят мгновенно, мерч — сборной отправкой внутренней почтой, цифровой двойник вещи — сразу. Лучший лот аукциона — кубик Рубика ОТП в цветах офисов CareTech.</p>
       <div class="modal-foot"><a class="btn btn-primary" href="#/shop" data-close>Магазин</a><a class="btn btn-secondary" href="#/colleagues" data-close>Все коллеги</a></div>` });
   };
   // Сертификаты по брони: партию распределяют по броням, а не «кто первый успел»
@@ -5854,9 +5845,9 @@ body.is-auth .view { padding: 0; }
     const c = D.shop.certs.find((x) => x.id === ds.id), b = OM.store.batch(ds.id);
     if (!c || !b) return;
     const block = OM.store.certCheck(), bal = OM.state.balance.coin;
-    form(`Сертификат «${c.name}» ${OM.fmt(c.nominal)} ₽`, `<p class="modal-sub">Сертификаты приходят партиями. Бронь замораживает Коины до выкладки; если броней больше, чем сертификатов, — жребий среди броней, а не «кто первый успел».</p>
+    form(`Сертификат «${c.name}» ${OM.fmt(c.nominal)} ₽`, `<p class="modal-sub">Бронь замораживает Коины до выкладки; если броней больше, чем сертификатов, — жребий</p>
       <div class="list mt-16"><div class="list-item"><span class="grow muted">Следующая партия</span><b>~${esc(b.date)}</b></div><div class="list-item"><span class="grow muted">Забронировано</span><b>${OM.fmt(b.booked)} из ${OM.fmt(b.size)}</b></div><div class="list-item"><span class="grow muted">Цена</span>${OM.money(c.price, 'coin', 20)}</div><div class="list-item"><span class="grow muted">Ваш баланс</span>${OM.money(bal, 'coin', 20)}</div></div>
-      <p class="small muted mt-16">${b.booked >= b.size ? 'Броней уже больше, чем сертификатов в партии, — будет жребий. Если не повезёт, Коины вернутся, а в следующей партии вы будете первыми. ' : ''}После выкладки на подтверждение — 48 часов. Снять бронь до выкладки можно в любой момент.</p>`,
+      <p class="small muted mt-16">${b.booked >= b.size ? 'Если не повезёт, Коины вернутся, а в следующей партии вы будете первыми. ' : ''}После выкладки на подтверждение — 48 часов. Снять бронь до выкладки можно в любой момент.</p>`,
       () => {
         if (block) return block;
         if (bal < c.price) return `Не хватает ${OM.fmt(c.price - bal)} ${OM.curName('coin', c.price - bal)}`;
@@ -5930,7 +5921,7 @@ body.is-auth .view { padding: 0; }
       ['Тимур · сотрудник', 'timur', 'bonuses', 'Заберите настоящую награду из предыдущего шага. Она сохранится после выхода и перезагрузки.'],
       ['Тимур · первые шаги', 'timur', 'home', 'Посмотрите открытку, отправьте задачу на проверку, поблагодарите наставника, проголосуйте в номинациях команды и забронируйте сертификат. В магазине можно предложить поездку за счёт ОТП.'],
       ['Анна · вклад месяца', 'anna', 'wardrobe', 'Примерьте одежду месяца, выберите титул и загляните в офис.'],
-      ['Ева · HR', 'eva', 'admin', 'Проверьте запросы сотрудников, правила инициатив, метрики, брони сертификатов и экономику программы.'],
+      ['Ева · HR', 'eva', 'admin', 'Проверьте запросы команд к пулу признания, метрики, брони сертификатов и экономику программы.'],
       ['Ирина · директор', 'irina', 'admin', 'Подтвердите награды куратору и руководителю по оценке в демонстрационной системе СОП.']
     ];
     OM.modal.open({ size: 'wide', label: 'Показать историю', html: `<div class="modal-title">Показать историю · 5 минут</div><p class="modal-sub">Шаги сохраняют действия между аккаунтами. Откройте эту историю снова, чтобы перейти дальше.</p><div class="list mt-20">${steps.map(([title,id,route,desc],i) => `<div class="list-item"><span class="way-n">${i+1}</span><div class="grow"><b>${title}</b><p class="small muted">${desc}</p></div><button class="btn btn-sm btn-secondary" data-tour-account="${id}" data-route="${route}">Открыть</button></div>`).join('')}</div>`, onMount(el, entry) { el.addEventListener('click', e => { const b = e.target.closest('[data-tour-account]'); if (!b) return; OM.modal.close(entry); OM.logout(); OM.login(b.dataset.tourAccount); OM.state.onboarded = true; OM.save(); const next = '#/' + b.dataset.route; if (location.hash === next) window.dispatchEvent(new HashChangeEvent('hashchange')); else location.hash = next; }); } });
@@ -6009,7 +6000,7 @@ body.is-auth .view { padding: 0; }
         <div class="mgr-stats">
           <div><b>${sig}</b><span class="small muted">${OM.plural(sig, ['сигнал', 'сигнала', 'сигналов'])}</span></div>
           <div><b>${req}</b><span class="small muted">${OM.plural(req, ['запрос', 'запроса', 'запросов'])}</span></div>
-          <div><b>${OM.num(b.total - b.paid - b.orders - b.reserve)} млн ₽</b><span class="small muted">свободно</span></div>
+          <div><b>${OM.num(b.shop - b.paid - b.orders + b.events - b.evUsed, 1)} млн ₽</b><span class="small muted">свободно</span></div>
         </div>
         <a class="btn btn-primary" href="#/admin">Открыть ${OM.icon('arrow', 16)}</a>
       </div>`;
@@ -6073,7 +6064,7 @@ body.is-auth .view { padding: 0; }
           <a class="stat clickable" href="#/shop"><div class="stat-v tnum">${OM.coin('coin', 26)}${OM.fmt(s.balance.coin)}</div><div class="stat-l">Коины · магазин</div></a>
           <a class="stat clickable" href="#/bonuses"><div class="stat-v tnum">${OM.coin('ru', 26)}${OM.fmt(s.balance.ru)}</div><div class="stat-l">РуКоины · привилегии</div></a>
         </div>
-        ${held ? `<div class="small muted">В брони ${OM.fmt(held)} — спишется при выдаче</div>` : ''}
+        ${held ? `<div class="small muted">В брони ${OM.fmt(held)}</div>` : ''}
         ${pend.length ? pend.slice(0, 3).map((p) => `<div class="reward-call"><div class="reward-gift">${OM.icon('gift', 24)}</div><div class="grow"><b>+${OM.fmt(p.amount)} ${OM.curName(p.cur, p.amount)}</b><span>${OM.rewardFrom(p)}</span></div><button class="btn btn-primary btn-sm" data-act="claim" data-id="${p.id}">Забрать</button></div>`).join('') : `<div class="try-note">${OM.icon('check', 18)}<span>Все награды получены</span></div>`}
       </div>`;
     },
@@ -6097,8 +6088,8 @@ body.is-auth .view { padding: 0; }
     tasks() {
       const tasks = OM.store.tasks().filter(t => t.who === OM.meId);
       const st = S().taskStreak;
-      const labels = { open: 'К выполнению', review: 'На проверке', done: 'Завершено' };
-      return `<div class="card mt-20" data-sec="tasks"><div class="card-head"><div><div class="card-title">Мои задачи и награды</div><p class="small muted mt-8">Сумма известна заранее. За задачи выше средней сложности награда закреплена автоматически.</p></div>${S().prefs.noStreak ? '' : `<span class="badge badge-violet">${OM.icon('flame', 15)} ${st.weeks} нед. закрытия задач</span>`}</div><div class="list">${tasks.map(t => `<div class="list-item"><span class="way-n">${OM.icon(t.category === 'social' ? 'heart' : 'check', 18)}</span><div class="grow"><b>${esc(t.title)}</b><div class="small muted">${t.category === 'social' ? 'Социальный вклад' : 'Профессиональный результат'} · ${labels[t.status]}${t.feedback && t.status === 'open' ? ' · ' + esc(t.feedback) : ''}</div></div><span>${t.amount ? OM.money(t.amount, 'ru', 18) : '<span class="small muted">Без Коинов</span>'}</span>${t.status === 'open' ? `<button class="btn btn-sm btn-primary" data-act="completeTask" data-id="${t.id}">Закрыть задачу</button>` : `<span class="badge badge-soft">${labels[t.status]}</span>`}</div>`).join('') || '<p class="small muted">Новые задачи появятся здесь</p>'}</div><p class="small muted mt-16">Три недели с подтверждёнными задачами открывают одежду «В ритме» и титул. Они доступны, пока серия держится; отпуск и больничный замораживают её. Коины остаются у вас.</p></div>`;
+      const labels = { review: 'На проверке', done: 'Завершено' };
+      return `<div class="card mt-20" data-sec="tasks"><div class="card-head"><div><div class="card-title">Мои задачи и награды</div></div>${S().prefs.noStreak ? '' : `<span class="badge badge-violet">${OM.icon('flame', 15)} ${st.weeks} нед. закрытия задач</span>`}</div><div class="list">${tasks.map(t => `<div class="list-item"><span class="way-n">${OM.icon(t.category === 'social' ? 'heart' : 'check', 18)}</span><div class="grow"><b>${esc(t.title)}</b>${t.feedback && t.status === 'open' ? `<div class="small muted">${esc(t.feedback)}</div>` : ''}</div><span>${t.amount ? OM.money(t.amount, 'ru', 18) : '<span class="small muted">Без Коинов</span>'}</span>${t.status === 'open' ? `<button class="btn btn-sm btn-primary" data-act="completeTask" data-id="${t.id}">Закрыть задачу</button>` : `<span class="badge badge-soft">${labels[t.status]}</span>`}</div>`).join('') || '<p class="small muted">Новые задачи появятся здесь</p>'}</div></div>`;
     },
 
     // Открытка от команды, вишлист и чужие праздники
@@ -6108,7 +6099,7 @@ body.is-auth .view { padding: 0; }
       if (mine) {
         blocks.push(`<button class="social-row" data-act="card" data-owner="${OM.meId}">
           <span class="ava-stack">${mine.signs.slice(0, 4).map((x) => OM.ava(OM.person(x.who), 30, { title: false })).join('')}</span>
-          <span class="grow"><b>${esc(mine.title)}</b><span class="small muted">${mine.signs.length} ${OM.plural(mine.signs.length, ['подпись', 'подписи', 'подписей'])} в открытке${mine.gift ? ' · ' + esc(mine.gift) : ''}</span></span>${OM.icon('arrow', 16)}</button>`);
+          <span class="grow"><b>${esc(mine.title)}</b><span class="small muted">${mine.signs.length} ${OM.plural(mine.signs.length, ['подпись', 'подписи', 'подписей'])} в открытке</span></span>${OM.icon('arrow', 16)}</button>`);
       }
       const w = OM.wishOf('me');
       if (w) {
@@ -6155,13 +6146,11 @@ body.is-auth .view { padding: 0; }
       let weeks = '';
       for (let i = 11; i >= 1; i--) weeks += `<i class="${i <= st.weeks - (st.done ? 1 : 0) ? 'on' : 'off'}"></i>`;
       weeks += `<i class="today ${st.done ? 'on' : ''}" title="Эта неделя"></i>`;
-      const fox = OM.item('pet', 'fox');
       return `<div class="card" data-sec="streak">
         <div class="card-head"><div class="card-title">Ударный режим</div>${s.prefs.vacation ? `<span class="badge badge-blue">❄ В отпуске</span>` : ''}</div>
         <div class="streak-num">${OM.flameSvg(st.done)}<span class="v">${st.weeks}</span><span class="muted">${OM.plural(st.weeks, ['неделя', 'недели', 'недель'])} подряд</span></div>
         <div class="days">${weeks}</div>
         <div class="small muted mt-8">${st.done ? 'Эта неделя засчитана ✓' : s.prefs.vacation ? 'Вы в отпуске — режим заморожен' : 'Поблагодарите кого-нибудь на этой неделе'}</div>
-        <div class="small muted mt-12">❄ Заморозка: ${st.freezes} · в отпуске — сама · ${st.best >= fox.need ? 'питомец «Лис» открыт' : `${fox.need} недель — питомец «Лис»`}</div>
       </div>`;
     },
 
@@ -6169,7 +6158,7 @@ body.is-auth .view { padding: 0; }
       const s = S();
       const av = s.av;
       if (!av.pet || av.pet === 'none') {
-        return `<div class="card pet-card" data-sec="pet"><div class="card-title">Питомец</div><p class="muted mt-8">Растёт от маленьких полезных дел и никогда не ругает.</p><a class="btn btn-primary mt-16" href="#/wardrobe" data-wtab="pet">${OM.icon('paw', 18)} Завести питомца</a></div>`;
+        return `<div class="card pet-card" data-sec="pet"><div class="card-title">Питомец</div><a class="btn btn-primary mt-16" href="#/wardrobe" data-wtab="pet">${OM.icon('paw', 18)} Завести питомца</a></div>`;
       }
       const ph = petPhrases();
       const text = ph[phraseI % ph.length];
@@ -6218,10 +6207,10 @@ body.is-auth .view { padding: 0; }
       if (st.claimed) return '<div data-sec="steps" hidden></div>';
       const all = st.done === st.total;
       return `<div class="card mt-20" data-sec="steps">
-        <div class="card-head"><div><div class="card-title">Первые шаги</div><div class="card-sub">${st.newcomer ? `Пройди весь чек-лист — ${OM.fmt(st.coins)} Коинов один раз, из фонда «Стаж и важные даты»` : 'Знакомство с обновлённой ОТП Манией — титул «Свой человек»'}</div></div><span class="badge ${all ? 'badge-lime' : 'badge-gray'}">${st.done} из ${st.total}</span></div>
+        <div class="card-head"><div><div class="card-title">Первые шаги</div><div class="card-sub">${st.newcomer ? `Пройди весь чек-лист — ${OM.fmt(st.coins)} Коинов` : 'Титул «Свой человек»'}</div></div><span class="badge ${all ? 'badge-lime' : 'badge-gray'}">${st.done} из ${st.total}</span></div>
         <div class="bar"><i style="width:${Math.round((st.done / st.total) * 100)}%"></i></div>
-        <div class="steps-list mt-12">${st.list.map((x, k) => `<div class="step-row ${x.done ? 'done' : ''}"><span class="step-n">${x.done ? OM.icon('check', 14, 2.6) : k + 1}</span><div class="grow"><b>${esc(x.title)}</b><div class="small muted">${esc(x.hint)}</div></div>${x.done ? '' : `<button class="btn btn-xs btn-secondary" data-act="${x.act}"${x.zone ? ` data-id="${x.zone}"` : ''}>${esc(x.cta)}</button>`}</div>`).join('')}</div>
-        ${all ? `<button class="btn btn-primary mt-16" data-act="claimSteps">${st.newcomer ? `Забрать ${OM.fmt(st.coins)} Коинов` : 'Получить титул «Свой человек»'}</button>` : '<p class="small muted mt-12">Награда — один раз за весь чек-лист, а не за клики: каждый шаг проверяется.</p>'}
+        <div class="steps-list mt-12">${st.list.map((x, k) => `<div class="step-row ${x.done ? 'done' : ''}"><span class="step-n">${x.done ? OM.icon('check', 14, 2.6) : k + 1}</span><div class="grow"><b>${esc(x.title)}</b>${x.hint ? `<div class="small muted">${esc(x.hint)}</div>` : ''}</div>${x.done ? '' : `<button class="btn btn-xs btn-secondary" data-act="${x.act}"${x.zone ? ` data-id="${x.zone}"` : ''}>${esc(x.cta)}</button>`}</div>`).join('')}</div>
+        ${all ? `<button class="btn btn-primary mt-16" data-act="claimSteps">${st.newcomer ? `Забрать ${OM.fmt(st.coins)} Коинов` : 'Получить титул «Свой человек»'}</button>` : ''}
       </div>`;
     },
     // «Мой год в ОТП» — итоги в духе Wrapped, открываются в декабре
@@ -6346,9 +6335,9 @@ body.is-auth .view { padding: 0; }
 
   // Бронь сертификата: пояснение вместо полосы статуса
   const BOOK = {
-    booked: (o) => `Коины заморожены до партии ~${esc(o.batch)}. Партию распределим по броням, а не «кто первый успел».`,
+    booked: (o) => `Коины заморожены до партии ~${esc(o.batch)}`,
     offer: (o) => `Сертификат ваш — подтвердите до ${new Date(o.until).toLocaleString('ru-RU', { day: 'numeric', month: 'long', hour: '2-digit', minute: '2-digit' })}.`,
-    lost: () => 'Броней было больше, чем сертификатов. Коины вернулись, в следующей партии вы первые.',
+    lost: () => 'Коины вернулись, в следующей партии вы первые',
     expired: () => 'Время на подтверждение вышло, Коины вернулись.',
   };
   // Оценка после выдачи — из неё складывается CSI программы
@@ -6363,7 +6352,7 @@ body.is-auth .view { padding: 0; }
         <div class="grow">
           <div class="row-wrap"><b style="font-weight:500">${esc(o.name)}</b><span class="badge ${o.status === 'done' ? 'badge-soft' : ['cancelled', 'lost', 'expired'].includes(o.status) ? 'badge-gray' : 'badge-warn'}">${label}</span></div>
           <div class="small muted mt-4">${esc(o.id)} · ${OM.when(o.t)}${o.status === 'queue' ? ` · №${o.place} в очереди` : ''}${o.status === 'booked' ? ` · бронь №${o.place} на партию ~${esc(o.batch)}` : ''}${o.size ? ' · размер ' + esc(o.size) : ''}</div>
-          ${BOOK[o.status] ? `<div class="small muted mt-8">${BOOK[o.status](o)}</div>` : o.status === 'size' ? '<div class="small muted mt-8">Подарок от коллеги. Выберите свой размер, чтобы получить вещь и цифровой образ.</div>' : o.status !== 'cancelled' ? `<div class="order-status">${['В очереди', 'Готов к выдаче', 'Выдан'].map((_, i) => `<i class="${i < lvl ? 'on' : ''}"></i>`).join('')}</div><div class="row small muted mt-4" style="justify-content:space-between"><span>В очереди</span><span>Готов к выдаче</span><span>Выдан</span></div>` : ''}
+          ${BOOK[o.status] ? `<div class="small muted mt-8">${BOOK[o.status](o)}</div>` : o.status === 'size' ? '<div class="small muted mt-8">Подарок от коллеги</div>' : o.status !== 'cancelled' ? `<div class="order-status">${['В очереди', 'Готов к выдаче', 'Выдан'].map((_, i) => `<i class="${i < lvl ? 'on' : ''}"></i>`).join('')}</div><div class="row small muted mt-4" style="justify-content:space-between"><span>В очереди</span><span>Готов к выдаче</span><span>Выдан</span></div>` : ''}
           ${o.status === 'done' ? rate(o) : ''}
         </div>
         <div class="col" style="align-items:flex-end;gap:8px">
@@ -6395,9 +6384,9 @@ body.is-auth .view { padding: 0; }
           <div class="row-wrap"><button class="btn btn-secondary" data-act="yearReview">${OM.icon('star', 18)} Мой год в ОТП</button><button class="btn btn-secondary" data-act="howItWorks">${OM.icon('question', 18)} Правила</button></div></div>
 
         <div class="bonus-hero">
-          <div class="card bonus-bal"><div class="row">${OM.coin('coin', 30)}<b style="font-weight:500">Коины · доступно</b></div><div class="v tnum">${OM.fmt(s.balance.coin)}</div><div class="rub">≈ ${rub(s.balance.coin)} ₽ в основном каталоге</div><div class="small muted mt-8">В брони: ${OM.fmt(s.reserved.coin)} Коинов</div>
+          <div class="card bonus-bal"><div class="row">${OM.coin('coin', 30)}<b style="font-weight:500">Коины · доступно</b></div><div class="v tnum">${OM.fmt(s.balance.coin)}</div><div class="rub">≈ ${rub(s.balance.coin)} ₽</div>${s.reserved.coin ? `<div class="small muted mt-8">В брони: ${OM.fmt(s.reserved.coin)} Коинов</div>` : ''}
             <div class="row-wrap mt-20"><a class="btn btn-primary" href="#/shop">${OM.icon('bag', 18)} В магазин</a><button class="btn btn-secondary" data-act="transfer">Поделиться</button></div></div>
-          <div class="card bonus-bal"><div class="row">${OM.coin('ru', 30)}<b style="font-weight:500">РуКоины · доступно</b></div><div class="v tnum">${OM.fmt(s.balance.ru)}</div><div class="rub">Привилегии или обмен 1:1</div><div class="small muted mt-8">В брони: ${OM.fmt(s.reserved.ru)} РуКоинов</div>
+          <div class="card bonus-bal"><div class="row">${OM.coin('ru', 30)}<b style="font-weight:500">РуКоины · доступно</b></div><div class="v tnum">${OM.fmt(s.balance.ru)}</div><div class="rub">Привилегии или обмен 1:1</div>${s.reserved.ru ? `<div class="small muted mt-8">В брони: ${OM.fmt(s.reserved.ru)} РуКоинов</div>` : ''}
             <div class="row-wrap mt-20"><a class="btn btn-secondary" href="#/shop" data-shoptab="priv">Привилегии</a></div></div>
           <div class="card card-dark">
             <div class="card-head"><div class="card-title">Ждут получения</div>${s.pending.length > 1 ? `<button class="btn btn-primary btn-sm" data-act="claimAll">Забрать всё</button>` : ''}</div>
@@ -6409,13 +6398,11 @@ body.is-auth .view { padding: 0; }
           </div>
         </div>
 
-        <div class="try-note" style="background:var(--lime-3)">${OM.icon('shield', 18)}<span>Все накопленные Коины и РуКоины сохраняются без срока сгорания. Бронь возвращается при отмене заказа.</span></div>
-
         <section class="section">
           <div class="section-head"><h2 class="h2">Как получить</h2></div>
           <div class="grid g-4">
             <div class="card way"><span class="way-n">1</span><div class="h4">Вклад</div><div class="amount">1 000 – 5 000 ${OM.coin('ru', 22)}</div><p class="small muted">Назначает руководитель</p></div>
-            <div class="card way"><span class="way-n">2</span><div class="h4">«Выбор коллег»</div><div class="amount">25 000 ${OM.coin('ru', 22)}</div><a class="link-arrow small" href="#/vote">Голосовать ${OM.icon('arrow', 14)}</a></div>
+            <div class="card way"><span class="way-n">2</span><div class="h4">«Выбор коллег»</div><div class="amount">2 500–100 000 ${OM.coin('coin', 22)}</div><a class="link-arrow small" href="#/vote">Голосовать ${OM.icon('arrow', 14)}</a></div>
             <div class="card way"><span class="way-n">3</span><div class="h4">Важные даты</div><div class="amount">${OM.coin('coin', 22)} сами</div><p class="small muted">Стаж и юбилеи</p></div>
             <div class="card way"><span class="way-n">4</span><div class="h4">Подарок коллеги</div><div class="amount">${OM.coin('coin', 22)} перевод</div><p class="small muted">Коллега делится Коинами</p></div>
           </div>
@@ -6427,7 +6414,7 @@ body.is-auth .view { padding: 0; }
             ${orders()}
           </div>
           <div class="card">
-            <div class="card-title">Обмен РуКоинов</div><div class="card-sub">1 РуКоин = 1 Коин</div><div class="try-note mt-12">${OM.icon('info', 18)}<span>Сначала загляните в витрину РуКоинов: время и опыт там не стоят бюджету наград ни рубля.</span></div><button class="btn btn-sm btn-secondary mt-12" data-act="openShop" data-tab="priv">Витрина РуКоинов</button>
+            <div class="card-title">Обмен РуКоинов</div><div class="card-sub">1 РуКоин = 1 Коин</div><button class="btn btn-sm btn-secondary mt-12" data-act="openShop" data-tab="priv">Витрина РуКоинов</button>
             ${s.balance.ru > 0 ? `<div class="row mt-20" style="gap:10px"><div class="money h3">${OM.coin('ru', 24)}<span data-conv-v>${OM.fmt(conv)}</span></div>${OM.icon('arrow', 20)}<div class="money h3">${OM.coin('coin', 24)}<span data-conv-v2>${OM.fmt(conv)}</span></div></div>
               <input class="range mt-12" type="range" min="1" max="${s.balance.ru}" step="1" value="${conv}" data-conv aria-label="Сумма конвертации">
               <div class="row small muted" style="justify-content:space-between"><span>1</span><span>${OM.fmt(s.balance.ru)}</span></div>
@@ -6532,7 +6519,7 @@ body.is-auth .view { padding: 0; }
   function tag(it) {
     const st = OM.store.itemState(it);
     switch (st.kind) {
-      case 'free': return st.label === 'Бесплатно' ? 'Бесплатно' : `${OM.icon('check', 11, 2.6)} ${esc(st.label)}`;
+      case 'free': return st.label === 'Бесплатно' ? '' : `${OM.icon('check', 11, 2.6)} ${esc(st.label)}`;
       case 'owned': return `${OM.icon('check', 11, 2.6)} ${esc(st.label)}`;
       case 'buy': return `${OM.fmt(it.price)} ${OM.coin('coin', 14)}`;
       case 'kit': return `Комплект · ${OM.fmt(st.price)} ${OM.coin('coin', 14)}`;
@@ -6586,14 +6573,14 @@ body.is-auth .view { padding: 0; }
     const titles = OM.store.titles ? OM.store.titles() : [];
     const selectedTitle = titles.find((x) => x.id === prof.title && x.id !== 'none');
     return `${OM.tgCard(me, { size: 108, h: 250, cy: 90, badges: selectedTitle ? `<span class="tg-badge">${OM.icon('star', 13)} ${esc(selectedTitle.name)}</span>` : '' })}
-      <div class="opt-group mt-20"><div class="opt-title"><span>Титул</span><span class="small">за ваш вклад</span></div><div class="chips chip-w">${titles.map((t) => `<button class="chip ${(prof.title || 'none') === t.id ? 'on' : ''}" data-title="${t.id}" ${t.unlocked ? '' : 'disabled'} title="${esc(t.description)}">${t.unlocked ? '' : OM.icon('lock', 12)} ${esc(t.name)}${t.temporary ? ' · временный' : ''}</button>`).join('')}</div><p class="small muted mt-12">Титул «В ритме» действует, пока держится серия закрытия задач. «Вклад месяца» — до конца месяца победы. Титулы нельзя купить.</p></div>
-      <div class="opt-group mt-20"><div class="opt-title"><span>Цвет профиля</span><span class="small">как в Telegram</span></div><div class="swatches" style="gap:10px">${bds.map((it) => {
+      <div class="opt-group mt-20"><div class="opt-title"><span>Титул</span></div><div class="chips chip-w">${titles.map((t) => `<button class="chip ${(prof.title || 'none') === t.id ? 'on' : ''}" data-title="${t.id}" ${t.unlocked ? '' : 'disabled'} title="${esc(t.description)}">${t.unlocked ? '' : OM.icon('lock', 12)} ${esc(t.name)}</button>`).join('')}</div></div>
+      <div class="opt-group mt-20"><div class="opt-title"><span>Цвет профиля</span></div><div class="swatches" style="gap:10px">${bds.map((it) => {
         const b = OM.avatar.BACKDROPS[it.id];
         const st = OM.store.itemState(it);
         return `<button class="swatch ${prof.backdrop === it.id ? 'on' : ''}" style="width:48px;height:48px;background:${b.anim ? `linear-gradient(135deg,${b.c1},${b.c3},${b.c2})` : `radial-gradient(circle at 40% 35%,${b.c1},${b.c2})`}" data-slot="backdrop" data-id="${it.id}" title="${esc(it.name + (st.owned ? '' : ' — ' + (st.hint || (it.price ? it.price + ' Коинов' : ''))))}">${st.owned ? '' : `<span style="position:absolute;right:-4px;top:-4px;width:20px;height:20px;border-radius:50%;background:#222;color:#fff;display:grid;place-items:center">${OM.icon(st.kind === 'buy' ? 'coins' : 'lock', 11, 2.2)}</span>`}</button>`;
       }).join('')}</div></div>
       <div class="opt-group"><div class="opt-title"><span>Узор</span></div>${tiles('pattern', D.items.filter((i) => i.slot === 'pattern'), true)}</div>
-      <div class="opt-group"><div class="opt-title"><span>Рамка аватара</span><span class="small">знаки за вклад нельзя купить</span></div>${tiles('frame', D.items.filter((i) => i.slot === 'frame'), true)}</div>
+      <div class="opt-group"><div class="opt-title"><span>Рамка аватара</span></div>${tiles('frame', D.items.filter((i) => i.slot === 'frame'), true)}</div>
       <div class="opt-group"><div class="opt-title"><span>Эмодзи-статус</span></div><div class="emoji-grid">${D.emojis.map((e) => `<button class="emoji-btn ${prof.emoji === e ? 'on' : ''}" data-emoji="${e}">${e}</button>`).join('')}<button class="emoji-btn ${!prof.emoji ? 'on' : ''}" data-emoji="" style="font-size:13px;font-family:var(--font)">нет</button></div></div>`;
   }
 
@@ -6666,8 +6653,7 @@ body.is-auth .view { padding: 0; }
     render() {
       if (!draft) init();
       return `<div class="container">
-        <div class="page-head"><h1 class="h1">Гардероб</h1><span class="small muted">Примерка бесплатна</span></div>
-        <div class="try-note" style="margin:0 0 20px;background:var(--lime-3)">${OM.icon('star', 18)}<span>Особые образы за вклад: куртка «В ритме» — за 3 недели закрытия задач подряд, мантия «Вклад месяца» — на месяц победы. Отпуск и больничный замораживают серию.</span></div>
+        <div class="page-head"><h1 class="h1">Гардероб</h1></div>
         <div class="fitting">${mirror()}${panel()}</div>
       </div>`;
     },
@@ -6795,7 +6781,7 @@ body.is-auth .view { padding: 0; }
   function certs() {
     const blocked = OM.store.certCheck();
     const mine = (id) => S().orders.find((o) => o.ref === id && ['booked', 'offer'].includes(o.status));
-    return `<div class="try-note" style="margin-top:0">${OM.icon('info', 18)}<span>Сертификаты приходят партиями. Бронируйте заранее: партию распределяем по броням, при нехватке — жребий, на подтверждение 48 часов. Не больше ${D.shop.certLimit} в одни руки · один за окно.${blocked ? ' ' + esc(blocked) + '.' : ''}</span></div><div class="shop-grid">${D.shop.certs.map((c) => {
+    return `${blocked ? `<div class="try-note" style="margin-top:0">${OM.icon('info', 18)}<span>${esc(blocked)}</span></div>` : ''}<div class="shop-grid">${D.shop.certs.map((c) => {
       const b = OM.store.batch(c.id) || { date: '—', size: 1, booked: 0 };
       const my = mine(c.id);
       const pct = Math.min(100, Math.round((b.booked / b.size) * 100));
@@ -6810,7 +6796,7 @@ body.is-auth .view { padding: 0; }
 
 
   function communities() {
-    return `<p class="muted" style="margin-bottom:20px">50+ сообществ ОТП объединяют коллег. Выбирайте общую цель: банк организует событие из бюджета мероприятий, участники вносят Коины.</p><div class="shop-grid">${D.shop.communities.map((c) => {
+    return `<div class="shop-grid">${D.shop.communities.map((c) => {
       const got = OM.shared().comm[c.id] || 0, reached = got >= c.goal;
       return `<div class="card"><div class="row">${OM.icon('people', 26)}<h2 class="h4">${esc(c.name)}</h2></div><p class="small muted mt-12">${esc(c.what)}</p><div class="bar-label mt-20"><span>${OM.fmt(got)}</span><span class="muted">из ${OM.fmt(c.goal)} Коинов</span></div><div class="bar"><i style="width:${Math.min(100, got / c.goal * 100)}%"></i></div><button class="btn btn-primary mt-20" data-act="community" data-id="${c.id}" ${reached ? 'disabled' : ''}>${reached ? 'Цель собрана' : 'Поддержать сообщество'}</button></div>`;
     }).join('')}</div>`;
@@ -6819,26 +6805,26 @@ body.is-auth .view { padding: 0; }
   // Лот аукциона: ставка бронирует сумму в валюте лота, перебили — бронь возвращается
   function lotCard(seed) {
     const lot = OM.lot(seed.id), cur = lot.cur || 'coin', mine = lot.by === OM.meId, next = lot.bid + lot.step;
-    return `<div class="card"><div class="row"><span class="way-n">${OM.icon('star', 22)}</span><h2 class="h4">${esc(lot.name)}</h2></div><p class="small muted mt-12">${esc(lot.note || 'Лот из программы признания')}</p><div class="small muted mt-16">${mine ? 'Ваша ставка' : 'Текущая ставка'}</div><div class="h3 mt-4">${OM.money(lot.bid, cur, 22)}</div><div class="small muted mt-8">Шаг: ${OM.fmt(lot.step)} ${OM.curName(cur, lot.step)}</div><button class="btn ${mine ? 'btn-secondary' : 'btn-primary'} mt-20" data-act="bid" data-id="${lot.id}" ${mine ? 'disabled' : ''}>${mine ? 'Вы лидируете' : `Ставка ${OM.fmt(next)}`}</button></div>`;
+    return `<div class="card"><div class="row"><span class="way-n">${OM.icon('star', 22)}</span><h2 class="h4">${esc(lot.name)}</h2></div>${lot.note ? `<p class="small muted mt-12">${esc(lot.note)}</p>` : ''}<div class="small muted mt-16">${mine ? 'Ваша ставка' : 'Текущая ставка'}</div><div class="h3 mt-4">${OM.money(lot.bid, cur, 22)}</div><div class="small muted mt-8">Шаг: ${OM.fmt(lot.step)} ${OM.curName(cur, lot.step)}</div><button class="btn ${mine ? 'btn-secondary' : 'btn-primary'} mt-20" data-act="bid" data-id="${lot.id}" ${mine ? 'disabled' : ''}>${mine ? 'Вы лидируете' : `Ставка ${OM.fmt(next)}`}</button></div>`;
   }
 
   function auction() {
-    return `<div class="try-note" style="margin-top:0">${OM.icon('info', 18)}<span>Уникальный опыт за Коины. Ставка бронирует сумму; когда её перебивают, Коины возвращаются. Опыт за РуКоины — в витрине РуКоинов.</span></div><div class="shop-grid">${D.shop.auction.filter((l) => (l.cur || 'coin') === 'coin').map(lotCard).join('')}</div>`;
+    return `<div class="shop-grid">${D.shop.auction.filter((l) => (l.cur || 'coin') === 'coin').map(lotCard).join('')}</div>`;
   }
 
   // Витрина РуКоинов: личные РуКоины тратятся на время и опыт — без денег из бюджета наград
   function ruShowcase() {
     const s = S();
     const mine = (id) => s.orders.some((o) => o.ref === id && o.status !== 'cancelled');
-    return `<div class="card window-bar" style="flex-wrap:wrap;margin-bottom:0"><div class="row grow" style="gap:14px;min-width:min(260px,100%)"><span class="way-n" style="width:44px;height:44px">${OM.coin('ru', 26)}</span><div><b style="font-weight:500">Личные РуКоины — на время и опыт</b><div class="small muted">Эти позиции продаются только за РуКоины и не стоят бюджету наград ни рубля. Обмен в Коины 1:1 остаётся, обратно нельзя.</div></div></div><div class="row-wrap"><span class="bal-pill" style="cursor:default">${OM.coin('ru', 22)}<span class="tnum">${OM.fmt(s.balance.ru)}</span></span><a class="btn btn-sm btn-secondary" href="#/bonuses">Обменять в Коины</a></div></div>
-      <h2 class="h3 mt-24">Привилегии с лимитом</h2><p class="small muted mt-4" style="margin-bottom:12px">По согласованию графика с руководителем; выходной — не больше 2 дней в год</p>
+    return `<div class="card window-bar" style="flex-wrap:wrap;margin-bottom:0"><div class="row grow" style="gap:14px;min-width:min(260px,100%)"><span class="way-n" style="width:44px;height:44px">${OM.coin('ru', 26)}</span><div><b style="font-weight:500">Личные РуКоины — на время и опыт</b></div></div><div class="row-wrap"><span class="bal-pill" style="cursor:default">${OM.coin('ru', 22)}<span class="tnum">${OM.fmt(s.balance.ru)}</span></span><a class="btn btn-sm btn-secondary" href="#/bonuses">Обменять в Коины</a></div></div>
+      <h2 class="h3 mt-24" style="margin-bottom:12px">Привилегии с лимитом</h2>
       ${simple(D.shop.privileges, 'ru', 'calendar')}
-      <h2 class="h3 mt-24">Места на событиях</h2><p class="small muted mt-4" style="margin-bottom:12px">События уже оплачены — РуКоины решают, кто идёт</p>
+      <h2 class="h3 mt-24" style="margin-bottom:12px">Места на событиях</h2>
       <div class="shop-grid">${D.shop.ruSeats.map((it) => {
         const left = OM.store.seatsLeft(it.id), got = mine(it.id);
-        return `<div class="card"><div class="row"><span class="way-n">${OM.icon('people', 22)}</span><h2 class="h4">${esc(it.name)}</h2></div><p class="small muted mt-12">${esc(it.note)}</p><div class="small muted mt-16">Осталось мест: ${OM.fmt(left)} из ${OM.fmt(it.seats)}</div><div class="bar mt-8"><i style="width:${Math.round((1 - left / it.seats) * 100)}%"></i></div><div class="row mt-16" style="justify-content:space-between;gap:8px;flex-wrap:wrap">${OM.money(it.price, 'ru', 22)}<button class="btn btn-sm ${got ? 'btn-secondary' : 'btn-primary'}" data-act="takeSeat" data-id="${it.id}" ${got || !left ? 'disabled' : ''}>${got ? 'Место ваше' : !left ? 'Мест нет' : 'Занять место'}</button></div></div>`;
+        return `<div class="card"><div class="row"><span class="way-n">${OM.icon('people', 22)}</span><h2 class="h4">${esc(it.name)}</h2></div><div class="small muted mt-16">Осталось мест: ${OM.fmt(left)} из ${OM.fmt(it.seats)}</div><div class="bar mt-8"><i style="width:${Math.round((1 - left / it.seats) * 100)}%"></i></div><div class="row mt-16" style="justify-content:space-between;gap:8px;flex-wrap:wrap">${OM.money(it.price, 'ru', 22)}<button class="btn btn-sm ${got ? 'btn-secondary' : 'btn-primary'}" data-act="takeSeat" data-id="${it.id}" ${got || !left ? 'disabled' : ''}>${got ? 'Место ваше' : !left ? 'Мест нет' : 'Занять место'}</button></div></div>`;
       }).join('')}</div>
-      <h2 class="h3 mt-24">Аукцион опыта за РуКоины</h2><p class="small muted mt-4" style="margin-bottom:12px">Ставка бронирует РуКоины; если её перебивают, они возвращаются</p>
+      <h2 class="h3 mt-24" style="margin-bottom:12px">Аукцион опыта за РуКоины</h2>
       <div class="shop-grid">${D.shop.auction.filter((l) => l.cur === 'ru').map(lotCard).join('')}</div>`;
   }
 
@@ -6846,11 +6832,11 @@ body.is-auth .view { padding: 0; }
     const tickets = OM.store.eventTickets ? OM.store.eventTickets() : [];
     const requests = OM.store.eventRequests ? OM.store.eventRequests() : [];
     const labels = { review: 'На рассмотрении', approved: 'Поддержано ОТП', rejected: 'Отклонено' };
-    return `<div class="card window-bar" style="flex-wrap:wrap"><div class="grow" style="min-width:min(240px,100%)"><div class="card-title">Вместе при поддержке ОТП</div><p class="small muted mt-8">Предложите поездку или событие для коллег. ОТП организует и оплачивает согласованную инициативу, сотрудники берут билеты за Коины.</p></div><button class="btn btn-primary" style="white-space:normal" data-act="supportRequest">${OM.icon('plus', 18)} Предложить событие</button></div><div class="try-note">${OM.icon('info', 18)}<span>Премиум-категория: 1 ₽ стоимости участия = 10 Коинов. Курс виден до покупки; цены основного каталога сохраняются.</span></div>
+    return `<div class="card window-bar" style="flex-wrap:wrap;margin-bottom:20px"><div class="grow" style="min-width:min(240px,100%)"><div class="card-title">Вместе при поддержке ОТП</div></div><button class="btn btn-primary" style="white-space:normal" data-act="supportRequest">${OM.icon('plus', 18)} Предложить событие</button></div>
       <div class="shop-grid">${tickets.map((t) => {
         const booked = S().orders.some((o) => o.ref === t.id && o.status !== 'cancelled');
         const remaining = Math.max(0, t.seats - (t.booked || 0));
-        return `<div class="card"><span class="badge badge-soft">${t.type === 'trip' ? 'Поездка' : 'Событие'} · Поддержано ОТП</span><h2 class="h4 mt-16">${esc(t.title)}</h2><p class="small muted mt-8">${esc(t.purpose)}</p><div class="small muted mt-12">${esc(t.city)} · ${esc(t.date)}</div><div class="h3 mt-16">${OM.money(t.price, 'coin', 22)}</div><div class="small muted mt-8">${OM.fmt(t.costRub)} ₽ × 10 · осталось ${remaining} мест</div><button class="btn btn-primary mt-20" data-act="bookSupport" data-id="${t.id}" ${booked || !remaining ? 'disabled' : ''}>${booked ? 'Билет в моих заказах' : !remaining ? 'Мест нет' : 'Взять билет'}</button></div>`;
+        return `<div class="card"><span class="badge badge-soft">${t.type === 'trip' ? 'Поездка' : 'Событие'}</span><h2 class="h4 mt-16">${esc(t.title)}</h2><p class="small muted mt-8">${esc(t.purpose)}</p><div class="small muted mt-12">${esc(t.city)} · ${esc(t.date)}</div><div class="h3 mt-16">${OM.money(t.price, 'coin', 22)}</div><div class="small muted mt-8">Осталось ${remaining} мест</div><button class="btn btn-primary mt-20" data-act="bookSupport" data-id="${t.id}" ${booked || !remaining ? 'disabled' : ''}>${booked ? 'Билет в моих заказах' : !remaining ? 'Мест нет' : 'Взять билет'}</button></div>`;
       }).join('') || '<div class="card"><p class="muted">Здесь появятся билеты на одобренные события.</p></div>'}</div>
       ${requests.length ? `<section class="section"><div class="section-head"><h2 class="h3">Мои предложения</h2></div><div class="card list">${requests.map((t) => `<div class="list-item"><div class="grow"><b style="font-weight:500">${esc(t.title)}</b><div class="small muted">${esc(t.city)} · ${esc(t.date)} · ${OM.fmt(t.price)} Коинов за билет</div>${t.reason ? `<div class="small muted mt-8">${esc(t.reason)}</div>` : ''}</div><span class="badge ${t.status === 'approved' ? 'badge-soft' : t.status === 'review' ? 'badge-warn' : 'badge-gray'}">${labels[t.status] || 'На рассмотрении'}</span></div>`).join('')}</div></section>` : ''}`;
   }
@@ -6984,20 +6970,20 @@ body.is-auth .view { padding: 0; }
       const color = p.av[sl + 'Color'] || '';
       const pic = sl === 'pet' ? OM.avatar.pet(it.id, color) : OM.avatar.itemPreview(sl, it.id, color, p.av);
       const kind = it.src === 'kit' ? '<span class="badge badge-dark">с реальной вещью</span>' : it.src === 'digital' ? '<span class="badge badge-violet">цифровая</span>' : '';
-      return `<button class="item" data-act="itemCard" data-slot="${sl}" data-id="${it.id}" data-owner="${p.id}" data-color="${color}"><div class="item-pic">${pic}</div><div class="item-name">${esc(it.name)}</div><div class="item-tag">${kind || 'Открыть карточку'}</div></button>`;
+      return `<button class="item" data-act="itemCard" data-slot="${sl}" data-id="${it.id}" data-owner="${p.id}" data-color="${color}"><div class="item-pic">${pic}</div><div class="item-name">${esc(it.name)}</div><div class="item-tag">${kind}</div></button>`;
     }).join('');
   }
 
   function achCard(a, p, mine) {
     const by = a.by ? OM.person(a.by) : null;
     return `<div class="ach">
-      <div class="row-wrap">${OM.catBadge(a.cat)}<span class="badge badge-soft">${OM.icon('check', 12, 2.4)} Подтверждённый вклад</span></div>
+      <div class="row-wrap">${OM.catBadge(a.cat)}</div>
       <div class="ach-title">${esc(a.title)}</div>
       <div class="ach-text">${esc(a.what)}</div>
       <div class="ach-res"><b style="font-weight:600">Результат:</b> ${esc(a.res)}</div>
       <div class="ach-foot">
         <span class="ava-stack">${(a.parts || []).map((id) => OM.ava(OM.person(id), 26)).join('')}</span>
-        <span>${(a.parts || []).length > 1 ? 'Участники · ' : ''}${by ? (by.id === 'me' ? 'подтвердили вы' : (by.g === 'f' ? 'подтвердила ' : 'подтвердил ') + esc(by.name)) : ''} · ${OM.when(Date.now() - a.ago * 864e5)}</span>
+        <span>${by ? (by.id === 'me' ? 'подтвердили вы' : (by.g === 'f' ? 'подтвердила ' : 'подтвердил ') + esc(by.name)) : ''} · ${OM.when(Date.now() - a.ago * 864e5)}</span>
       </div>
       ${mine ? '' : `<div class="row-wrap mt-16"><button class="btn btn-sm btn-primary" data-act="thank" data-to="${p.id}" data-cat="${a.cat}">${OM.icon('heart', 16)} Поблагодарить</button>${OM.isTeam(p.id) ? `<button class="btn btn-sm btn-outline" data-act="teamVote" data-who="${p.id}" data-cat="${a.cat}">Голос в номинации</button>` : ''}</div>`}
     </div>`;
@@ -7009,7 +6995,7 @@ body.is-auth .view { padding: 0; }
     let html = '';
     if (wish && wish.kitObj) {
       const kit = wish.kitObj;
-      html += `<div class="card mt-16"><div class="card-title">Желание · ${esc(kit.name)}</div><p class="small muted mt-8">Коллеги помогают накопить из своих Коинов.</p><div class="bar-label mt-16"><span>Уже подарили</span>${OM.money(wish.got, 'coin', 18)}</div><div class="bar"><i style="width:${Math.min(100, wish.got / kit.price * 100)}%"></i></div><div class="small muted mt-8">Цель: ${OM.fmt(kit.price)} Коинов</div>${wish.from.slice(-3).map((gift) => `<div class="small mt-8">${esc((OM.person(gift.who) || {}).name || 'Коллега')}: ${esc(gift.note || 'На исполнение желания')} · ${OM.fmt(gift.amount)}</div>`).join('')}<button class="btn btn-secondary mt-16" data-act="${mine ? 'orderKit' : 'chipWish'}" ${mine ? `data-id="${kit.id}"` : `data-owner="${owner}"`}>${mine ? 'Заказать подарок' : 'Скинуться'}</button></div>`;
+      html += `<div class="card mt-16"><div class="card-title">Желание · ${esc(kit.name)}</div><div class="bar-label mt-16"><span>Уже подарили</span>${OM.money(wish.got, 'coin', 18)}</div><div class="bar"><i style="width:${Math.min(100, wish.got / kit.price * 100)}%"></i></div><div class="small muted mt-8">Цель: ${OM.fmt(kit.price)} Коинов</div>${wish.from.slice(-3).map((gift) => `<div class="small mt-8">${esc((OM.person(gift.who) || {}).name || 'Коллега')}: ${esc(gift.note || 'На исполнение желания')} · ${OM.fmt(gift.amount)}</div>`).join('')}<button class="btn btn-secondary mt-16" data-act="${mine ? 'orderKit' : 'chipWish'}" ${mine ? `data-id="${kit.id}"` : `data-owner="${owner}"`}>${mine ? 'Заказать подарок' : 'Скинуться'}</button></div>`;
     }
     if (card) html += `<div class="card mt-16"><div class="row"><span class="way-n">${OM.icon('heart', 20)}</span><div><div class="card-title">${esc(card.title)}</div><div class="small muted">${card.signs.length} ${OM.plural(card.signs.length, ['подпись', 'подписи', 'подписей'])} от коллег</div></div></div><button class="btn btn-secondary mt-16" data-act="card" data-owner="${owner}">${mine ? 'Читать открытку' : 'Открыть и подписать'}</button></div>`;
     return html;
@@ -7026,7 +7012,7 @@ body.is-auth .view { padding: 0; }
       const th = OM.thanksOf(id);
       const actions = mine
         ? `<a class="btn btn-primary" href="#/wardrobe">${OM.icon('hanger', 18)} Изменить образ</a>`
-        : `<button class="btn btn-primary" data-act="thank" data-to="${id}">${OM.icon('heart', 18)} Поблагодарить</button>${OM.isTeam(id) ? `<button class="btn btn-secondary" data-act="teamVote" data-who="${id}">Голос в номинации</button>` : ''}${OM.account.canManage ? `<button class="btn btn-secondary" data-act="award" data-who="${id}">Наградить</button>` : ''}<button class="btn btn-secondary" data-act="transfer" data-to="${id}">Поделиться Коинами</button><button class="btn btn-secondary" data-act="peerBonus" data-to="${id}">Peer-бонус · 1 000</button>`;
+        : `<button class="btn btn-primary" data-act="thank" data-to="${id}">${OM.icon('heart', 18)} Поблагодарить</button>${OM.isTeam(id) ? `<button class="btn btn-secondary" data-act="teamVote" data-who="${id}">Голос в номинации</button>` : ''}${OM.account.canManage ? `<button class="btn btn-secondary" data-act="award" data-who="${id}">Наградить</button>` : ''}<button class="btn btn-secondary" data-act="transfer" data-to="${id}">Поделиться Коинами</button>`;
       const badges = [
         OM.titleOf && OM.titleOf(id) ? `<span class="tg-badge">${OM.icon('star', 13)} ${esc(OM.titleOf(id))}</span>` : '',
         p.winner ? `<span class="tg-badge">${OM.icon('trophy', 14)} «Выбор коллег»</span>` : '',
@@ -7035,7 +7021,7 @@ body.is-auth .view { padding: 0; }
         ${mine ? `<div class="try-note" style="background:var(--lime-3);margin:0 0 20px">${OM.icon('eye', 18)}<span>Так вас видят коллеги</span></div>` : `<a class="link-arrow muted" href="#/colleagues" style="margin-bottom:16px;display:inline-flex">${OM.icon('back', 16)} Коллеги</a>`}
         <div class="profile-layout">
           <div class="profile-side">
-            ${OM.tgCard(p, { size: 150, h: 420, cy: 140, badges, actions })}
+            ${OM.tgCard(p, { size: 150, h: 420, cy: 140, sub: p.role, badges, actions })}
             <div class="card card-tight">
               <div class="small muted">Команда</div><div>${esc(p.team)}</div>
               <div class="small muted mt-12">Город</div><div>${esc(p.city)}</div>
@@ -7050,7 +7036,7 @@ body.is-auth .view { padding: 0; }
               ${ach.length ? ach.map((a) => achCard(a, p, mine)).join('') : `<div class="card"><div class="empty"><span class="emoji">🌱</span>${p.isNew ? 'Первые достижения впереди' : 'Пока нет достижений'}</div></div>`}
             </section>
             <section class="section">
-              <div class="section-head"><h2 class="h3">Образ</h2><span class="small muted">Нажмите, чтобы примерить</span></div>
+              <div class="section-head"><h2 class="h3">Образ</h2></div>
               <div class="card" style="padding:16px"><div class="items" style="grid-template-columns:repeat(auto-fill,minmax(120px,1fr))">${wearList(p)}</div></div>
             </section>
             <section class="section">
@@ -7071,7 +7057,8 @@ body.is-auth .view { padding: 0; }
 
 ;
 /* js/views/vote.js */
-/* «Выбор коллег»: выбор в команде → подтверждение → финал банка → итог.
+/* «Выбор коллег»: раунд каждый месяц — выбор в команде (3 × 2 500) → подтверждение → финал подразделения (3 × 10 000) → итог.
+   Раз в год — финал банка (3 × 100 000).
    Номинации не связаны со «спасибо»: в каждой номинации пул — вся команда, голос тайный и с причиной.
    В финале за себя и свою команду голосовать нельзя, промежуточные результаты скрыты. */
 (function () {
@@ -7082,19 +7069,15 @@ body.is-auth .view { padding: 0; }
   const S = () => OM.state;
 
   const STAGES = [
-    ['nominations', 'Выбор в команде', '1–10 число'],
-    ['review', 'Подтверждение', 'до 15-го'],
-    ['voting', 'Финал банка', '16–25 число'],
-    ['results', 'Итог', 'до конца месяца'],
+    ['nominations', 'Выбор в команде', '1–15 число'],
+    ['review', 'Подтверждение', '16–18 число'],
+    ['voting', 'Финал подразделения', '19–28 число'],
+    ['results', 'Итог', 'конец месяца'],
   ];
-  const NOTE = {
-    result: 'Профессиональная номинация · задачи, улучшения и клиентский результат',
-    learning: 'Профессиональная номинация · знания, наставничество и развитие',
-    enjoyment: 'Социальная номинация · атмосфера, сообщества и помощь коллегам',
-  };
-  const PRIZE = 25000;
+  const PRIZE = 10000;
   const cats = () => Object.keys(D.cats);
   const month = () => new Date().toLocaleDateString('ru-RU', { month: 'long' });
+  const round = () => new Date().toLocaleDateString('ru-RU', { month: 'long' });
   const people = (n) => (n % 10 >= 2 && n % 10 <= 4 && (n % 100 < 10 || n % 100 >= 20) ? 'человека' : 'человек');
   // Черновик выбора до отправки голоса — отдельно для каждого аккаунта
   const drafts = {};
@@ -7105,7 +7088,7 @@ body.is-auth .view { padding: 0; }
   };
   let opened = false;
 
-  const head = (cat, extra) => `<div class="section-head"><h2 class="h3">${D.cats[cat].name} <span class="muted" style="font-weight:400">· ${D.cats[cat].ru}</span></h2>${extra || ''}</div><p class="small muted" style="margin:-8px 0 16px">${NOTE[cat]}</p>`;
+  const head = (cat, extra) => `<div class="section-head"><h2 class="h3">${D.cats[cat].name} <span class="muted" style="font-weight:400">· ${D.cats[cat].ru}</span></h2>${extra || ''}</div>`;
   const done = (cat) => `<span class="badge badge-soft">${OM.icon('check', 12, 2.4)} Голос отдан</span>`;
 
   // Этап 1. В каждой номинации пул — вся команда
@@ -7114,7 +7097,7 @@ body.is-auth .view { padding: 0; }
     const d = draft(cat);
     if (mine && !d.edit) {
       const p = OM.person(mine.who);
-      return `<section class="vote-cat">${head(cat, done(cat))}<div class="card"><div class="row" style="gap:14px">${OM.ava(p, 48)}<div class="grow"><div class="small muted">Ваш голос · видите только вы</div><b style="font-weight:500">${esc(p.name)}</b><div class="small mt-8">«${esc(mine.why)}»</div></div><button class="btn btn-sm btn-secondary" data-edit="${cat}">Изменить</button></div></div></section>`;
+      return `<section class="vote-cat">${head(cat, done(cat))}<div class="card"><div class="row" style="gap:14px">${OM.ava(p, 48)}<div class="grow"><div class="small muted">Ваш голос</div><b style="font-weight:500">${esc(p.name)}</b><div class="small mt-8">«${esc(mine.why)}»</div></div><button class="btn btn-sm btn-secondary" data-edit="${cat}">Изменить</button></div></div></section>`;
     }
     return `<section class="vote-cat">${head(cat)}<div class="card">
       <div class="pool">${OM.store.teamPool().map((id) => { const p = OM.person(id); return `<button type="button" class="pool-p ${d.who === id ? 'on' : ''}" data-pool="${cat}" data-who="${id}">${OM.ava(p, 44, { title: false })}<span>${esc(OM.firstName(p))}</span></button>`; }).join('')}</div>
@@ -7125,8 +7108,8 @@ body.is-auth .view { padding: 0; }
   function teamStage() {
     const n = OM.store.teamPool().length;
     const k = cats().filter((c) => OM.store.myTeamVote(c)).length;
-    const merged = OM.account.team.length < 3 ? ' Ваша команда меньше трёх человек — голосуете в общем пуле отдела.' : '';
-    return `<div class="card window-bar" style="margin-bottom:28px"><div class="row" style="gap:14px"><span class="way-n" style="width:44px;height:44px">${OM.icon('people', 20)}</span><div><b style="font-weight:500">Пул — вся команда: ${n} ${people(n)}</b><div class="small muted">В каждой номинации один тайный голос с причиной. За себя голосовать нельзя, «спасибо» на номинации не влияет.${merged}</div></div></div>
+    const merged = OM.account.team.length < 3 ? 'Ваша команда меньше трёх человек — голосуете в общем пуле отдела' : '';
+    return `<div class="card window-bar" style="margin-bottom:28px"><div class="row" style="gap:14px"><span class="way-n" style="width:44px;height:44px">${OM.icon('people', 20)}</span><div><b style="font-weight:500">Пул — вся команда: ${n} ${people(n)}</b>${merged ? `<div class="small muted">${merged}</div>` : ''}</div></div>
       <div class="grow" style="min-width:180px"><div class="bar-label"><span>Ваши голоса</span><span class="muted">${k} из ${cats().length}</span></div><div class="bar"><i style="width:${(k / cats().length) * 100}%"></i></div></div></div>
       ${cats().map(teamCat).join('')}`;
   }
@@ -7142,8 +7125,7 @@ body.is-auth .view { padding: 0; }
         <div class="row mt-16" style="gap:12px">${OM.ava(p, 52)}<div><b style="font-weight:500">${esc(p.name)}</b><div class="small muted">${n.n} из ${n.total} голосов команды</div></div></div>
         <div class="list mt-12">${n.reasons.slice(0, 2).map((r) => `<div class="list-item small">«${esc(r)}»</div>`).join('')}</div>
         ${OM.account.canManage && n.status === 'wait' ? `<div class="row-wrap mt-12"><button class="btn btn-sm btn-primary" data-confirm="${cat}" data-ok="1">Подтвердить</button><button class="btn btn-sm btn-ghost" data-confirm="${cat}" data-ok="0">Попросить подробности</button></div>` : ''}</div>`;
-    }).join('')}</div>
-    <p class="small muted mt-16">Причины показываем без авторов. После подтверждения руководителя номинант команды выходит в финал банка 16-го числа.</p>`;
+    }).join('')}</div>`;
   }
 
   // Этап 3. Финал банка: номинанты команд, за свою команду голосовать нельзя
@@ -7153,11 +7135,12 @@ body.is-auth .view { padding: 0; }
     const participants = Array.from(new Set([f.who].concat(f.parts || [])));
     const own = participants.some((id) => OM.isMe(id));
     const blocked = own || participants.some((id) => OM.isTeam(id));
+    const others = f.parts.filter((id) => id !== f.who);
     return `<div class="fin ${voted ? 'voted' : ''} ${blocked ? 'blocked' : ''}">
       <div class="fin-title">${esc(f.title)}</div>
       <div class="small muted">${esc(f.res)}</div>
-      <div class="fin-who">${OM.ava(p, 36)}<div class="grow"><b style="font-weight:500">${esc(p.name)}</b><div class="small muted">${esc(p.team)}</div></div><a class="link small" href="#/profile/${p.id}">Профиль</a></div>
-      ${f.parts.length > 1 ? `<div class="row small muted"><span class="ava-stack">${f.parts.map((id) => OM.ava(OM.person(id), 24)).join('')}</span>${f.parts.map((id) => esc(OM.firstName(OM.person(id)))).join(', ')}</div>` : ''}
+      <div class="fin-who">${OM.ava(p, 36)}<div class="grow"><b style="font-weight:500">${esc(p.name)}</b></div><a class="link small" href="#/profile/${p.id}">Профиль</a></div>
+      ${others.length ? `<div class="row small muted"><span class="ava-stack">${others.map((id) => OM.ava(OM.person(id), 24)).join('')}</span>${others.map((id) => esc(OM.firstName(OM.person(id)))).join(', ')}</div>` : ''}
       <div class="fin-foot">${blocked
         ? `<span class="badge badge-gray" style="height:36px;font-size:13px">${OM.icon('lock', 13)} ${own ? 'Ваш вклад' : 'Ваша команда'}</span>`
         : voted
@@ -7175,7 +7158,7 @@ body.is-auth .view { padding: 0; }
   function voting() {
     const v = S().votes;
     const n = cats().filter((c) => v[c]).length;
-    return `<div class="card window-bar" style="margin-bottom:28px"><div class="row" style="gap:14px"><span class="way-n" style="width:44px;height:44px">${OM.icon('vote', 20)}</span><div><b style="font-weight:500">Ваши голоса: ${n} из ${cats().length}</b><div class="small muted">В финале — номинанты команд банка. По одному голосу в номинации, учитываем всех соавторов</div></div></div>
+    return `<div class="card window-bar" style="margin-bottom:28px"><div class="row" style="gap:14px"><span class="way-n" style="width:44px;height:44px">${OM.icon('vote', 20)}</span><div><b style="font-weight:500">Ваши голоса: ${n} из ${cats().length}</b></div></div>
       <div class="grow" style="min-width:180px"><div class="bar"><i style="width:${(n / cats().length) * 100}%"></i></div></div></div>
       ${cats().map((cat) => `<section class="vote-cat">${head(cat, v[cat] ? done(cat) : '')}<div class="fin-grid">${finalOrder(cat).map((f) => finalist(cat, f)).join('')}</div></section>`).join('')}`;
   }
@@ -7191,7 +7174,7 @@ body.is-auth .view { padding: 0; }
       const p = OM.person(win.who);
       return `<section class="vote-cat">${head(cat)}
         <div class="grid g-main">
-          <div class="card winner"><div class="row-wrap"><span class="badge badge-lime">${OM.icon('trophy', 13)} Вклад месяца</span><span class="badge" style="background:rgba(255,255,255,.12);color:#fff">+${OM.fmt(PRIZE)} ${OM.coin('ru', 14)}</span></div>
+          <div class="card winner"><div class="row-wrap"><span class="badge badge-lime">${OM.icon('trophy', 13)} Лучший вклад подразделения</span><span class="badge" style="background:rgba(255,255,255,.12);color:#fff">+${OM.fmt(PRIZE)} ${OM.coin('coin', 14)}</span></div>
             <div class="row mt-16">${OM.ava(p, 64)}<div><div class="h4">${esc(win.title)}</div><div class="muted small">${esc(p.name)} · ${esc(p.team)}</div></div></div>
             <p class="mt-12 small" style="color:rgba(255,255,255,.85)">${esc(win.res)}</p>
             ${win.parts.length > 1 ? `<p class="small muted mt-8">Делится между участниками</p>` : ''}</div>
@@ -7207,9 +7190,9 @@ body.is-auth .view { padding: 0; }
       const st = S().stage;
       const body = st === 'nominations' ? teamStage() : st === 'review' ? nomineesStage() : st === 'voting' ? voting() : results();
       return `<div class="container">
-        <div class="page-head"><h1 class="h1">Выбор коллег · ${month()}</h1></div>
+        <div class="page-head"><h1 class="h1">Выбор коллег · ${round()}</h1></div>
         <div class="stages">${STAGES.map(([id, n, d], i) => `<button class="stage ${st === id ? 'on' : ''} ${STAGES.findIndex((x) => x[0] === st) > i ? 'done' : ''}" data-stage="${id}"><b>${i + 1}. ${n}</b><span class="small muted">${d}</span></button>`).join('')}</div>
-        <div class="small muted mt-12">Демо: нажмите на этап. Номинации не связаны со «спасибо»: в каждой номинации пул — вся команда, номинант команды выходит в финал банка. В финале за себя и свою команду голосовать нельзя.</div>
+        <div class="small muted mt-12">Демо: нажмите на этап</div>
         <div class="mt-24">${body}</div>
       </div>`;
     },
@@ -7242,7 +7225,7 @@ body.is-auth .view { padding: 0; }
           return;
         }
         const cf = e.target.closest('[data-confirm]');
-        if (cf) { OM.store.confirmNominee(cf.dataset.confirm, cf.dataset.ok === '1'); OM.toast(cf.dataset.ok === '1' ? 'Номинант подтверждён и выйдет в финал банка' : 'Запросили у команды подробности', { icon: 'check' }); return; }
+        if (cf) { OM.store.confirmNominee(cf.dataset.confirm, cf.dataset.ok === '1'); OM.toast(cf.dataset.ok === '1' ? 'Номинант подтверждён и выйдет в финал подразделения' : 'Запросили у команды подробности', { icon: 'check' }); return; }
         const v = e.target.closest('[data-vote]');
         if (v) {
           const was = S().votes[v.dataset.vote];
@@ -7281,12 +7264,12 @@ body.is-auth .view { padding: 0; }
     return `<div class="card chart-card" data-chart="${id}"><div class="card-head"><div><div class="card-title">${title}</div>${sub ? `<div class="card-sub">${sub}</div>` : ''}</div>${table ? `<button class="btn btn-xs btn-secondary tbl-toggle" data-tbl="${id}">${OM.icon(tables[id] ? 'chart' : 'table', 14)} ${tables[id] ? 'График' : 'Таблица'}</button>` : ''}</div><div class="chart">${tables[id] && table ? table : chart}</div></div>`;
   }
   function guidebook() {
-    OM.modal.open({ size: 'wide', label: 'Гайд по наградам', html: `<div class="modal-title">Сколько Коинов назначать</div><p class="modal-sub">Сумма известна сотруднику до начала задачи. Руководитель подтверждает результат.</p><div class="list mt-20">${D.rewardGuide.map((t) => `<div class="list-item"><div class="grow"><b style="font-weight:500">${esc(t.name)}</b><div class="small muted">${esc(t.example)}</div><span class="badge ${t.automatic ? 'badge-soft' : 'badge-gray'} mt-8">${t.automatic ? 'Прикрепляется автоматически' : 'По подтверждённому вкладу'}</span></div>${t.amount ? OM.money(t.amount, 'ru', 20) : '<span class="small">Спасибо</span>'}</div>`).join('')}</div><div class="story mt-20"><b style="font-weight:500">Один результат — одна награда</b><p class="small mt-8">Для задач выше среднего уровня сумма прикрепляется автоматически. Повторное закрытие не приносит вторую награду. Социальные инициативы оцениваем по участию и пользе для команды.</p><p class="small mt-8">Перед подтверждением проверьте результат и участников. Клики и просмотр новостей не оплачиваются.</p></div><div class="modal-foot"><button class="btn btn-primary" data-close>Понятно</button></div>` });
+    OM.modal.open({ size: 'wide', label: 'Гайд по наградам', html: `<div class="modal-title">Сколько Коинов назначать</div><p class="modal-sub">Сумма известна сотруднику до начала задачи. Руководитель подтверждает результат.</p><div class="list mt-20">${D.rewardGuide.map((t) => `<div class="list-item"><div class="grow"><b style="font-weight:500">${esc(t.name)}</b><div class="small muted">${esc(t.example)}</div><span class="badge ${t.automatic ? 'badge-soft' : 'badge-gray'} mt-8">${t.automatic ? 'Прикрепляется автоматически' : 'По подтверждённому вкладу'}</span></div>${t.amount ? OM.money(t.amount, 'ru', 20) : '<span class="small">Спасибо</span>'}</div>`).join('')}</div><div class="story mt-20"><b style="font-weight:500">Один результат — одна награда</b><p class="small mt-8">Для задач выше среднего уровня сумма прикрепляется автоматически. Повторное закрытие не приносит вторую награду.</p></div><div class="modal-foot"><button class="btn btn-primary" data-close>Понятно</button></div>` });
   }
   function taskQueue() {
     const list = OM.store.tasks();
     const labels = { open: 'В работе', review: 'На проверке', done: 'Подтверждено' };
-    return `<section class="section" id="team-tasks"><div class="section-head"><div><h2 class="h2">Задачи команды</h2><div class="muted mt-8">Награда прикреплена заранее · закрытие подтверждает руководитель</div></div><button class="btn btn-secondary" data-guidebook>Гайд по наградам</button></div><div class="card"><div class="list">${list.map((t) => { const p = OM.person(t.who), guide = D.rewardGuide.find((g) => g.id === t.difficulty); return `<div class="list-item" style="flex-wrap:wrap"><div class="grow" style="min-width:180px"><div class="row-wrap"><span class="badge ${t.category === 'social' ? 'badge-violet' : 'badge-blue'}">${t.category === 'social' ? 'Социальная' : 'Профессиональная'}</span><span class="small muted">${esc(guide ? guide.name : t.difficulty)}</span></div><b style="font-weight:500;display:block" class="mt-8">${esc(t.title)}</b><div class="small muted mt-8">${esc(p.name)}${t.evidence ? ' · ' + esc(t.evidence) : ''}</div></div><div>${t.amount ? OM.money(t.amount, 'ru', 20) : '<span class="small muted">Спасибо</span>'}<div class="small muted mt-8">${labels[t.status]}</div></div>${t.status === 'review' ? `<div class="row-wrap"><button class="btn btn-sm btn-primary" data-task-review="${t.id}" data-ok="1">Подтвердить результат</button><button class="btn btn-sm btn-ghost" data-task-review="${t.id}" data-ok="0">Вернуть на доработку</button></div>` : ''}</div>`; }).join('')}</div></div></section>`;
+    return `<section class="section" id="team-tasks"><div class="section-head"><div><h2 class="h2">Задачи команды</h2></div><button class="btn btn-secondary" data-guidebook>Гайд по наградам</button></div><div class="card"><div class="list">${list.map((t) => { const p = OM.person(t.who), guide = D.rewardGuide.find((g) => g.id === t.difficulty); return `<div class="list-item" style="flex-wrap:wrap"><div class="grow" style="min-width:180px"><div class="row-wrap"><span class="small muted">${esc(guide ? guide.name : t.difficulty)}</span></div><b style="font-weight:500;display:block" class="mt-8">${esc(t.title)}</b><div class="small muted mt-8">${esc(p.name)}${t.evidence ? ' · ' + esc(t.evidence) : ''}</div></div><div>${t.amount ? OM.money(t.amount, 'ru', 20) : '<span class="small muted">Спасибо</span>'}<div class="small muted mt-8">${labels[t.status]}</div></div>${t.status === 'review' ? `<div class="row-wrap"><button class="btn btn-sm btn-primary" data-task-review="${t.id}" data-ok="1">Подтвердить результат</button><button class="btn btn-sm btn-ghost" data-task-review="${t.id}" data-ok="0">Вернуть на доработку</button></div>` : ''}</div>`; }).join('')}</div></div></section>`;
   }
 
   OM.views.team = {
@@ -7300,7 +7283,7 @@ body.is-auth .view { padding: 0; }
       const quiet = D.team.map((p) => ({ p, r: OM.store.teamRec(p) })).filter((x) => x.r == null || x.r > 30).sort((a, b) => (b.r == null ? 999 : b.r) - (a.r == null ? 999 : a.r));
       const tiersHtml = D.indexTiers.map((t) => {
         const on = index.tier && index.tier.id === t.id, done = index.tier && index.tier.from > t.from;
-        return `<div class="tier ${on ? 'on' : ''} ${done ? 'done' : ''}"><span class="tier-check">${on || done ? OM.icon('check', 14, 2.6) : OM.icon('lock', 13, 2)}</span><div class="tier-pct">${t.from}+</div><div class="tier-name">${esc(t.name)}</div><div class="tier-cond">Статус за индекс от ${t.from}</div>${t.perk ? `<div class="tier-cond">${esc(t.perk)}</div>` : ''}</div>`;
+        return `<div class="tier ${on ? 'on' : ''} ${done ? 'done' : ''}"><span class="tier-check">${on || done ? OM.icon('check', 14, 2.6) : OM.icon('lock', 13, 2)}</span><div class="tier-pct">${t.from}+</div><div class="tier-name">${esc(t.name)}</div>${t.perk ? `<div class="tier-cond">${esc(t.perk)}</div>` : ''}</div>`;
       }).join('');
       const byMonth = M.byMonth.map((m, i) => i === M.byMonth.length - 1 ? [m[0], fund.used] : m);
       const covSeries = M.coverage.map((v, i) => [`${i + 1} нед`, i === M.coverage.length - 1 ? Math.round(cov.pct * 100) : v]);
@@ -7314,21 +7297,19 @@ body.is-auth .view { padding: 0; }
           <div class="card kpi"><span class="small muted">«Выбор коллег» · номинанты</span><div class="kpi-v">${waitN}<small>${waitN ? 'ждут подтверждения' : 'подтверждены'}</small></div><a class="link-arrow small mt-8" href="#nominees" data-scroll="nominees">Перейти ${OM.icon('arrow', 14)}</a></div>
         </div>
         <div class="card card-dark mt-20" style="padding:28px" data-recognition-index>
-          <div class="row-wrap" style="justify-content:space-between;align-items:flex-start"><div><div class="h2" style="color:#fff">Индекс признания</div><p class="muted mt-8" style="max-width:520px">За регулярное внимание к людям и оценку команды. Не зависит от суммы наград.</p></div><div style="text-align:right"><div class="small muted">Ваш индекс · из 100</div><div class="h1 tnum" style="color:var(--lime)">${index.value}</div><div class="small muted">${index.tier ? esc(index.tier.name) : 'До первой ступени — 60'}</div></div></div>
+          <div class="row-wrap" style="justify-content:space-between;align-items:flex-start"><div><div class="h2" style="color:#fff">Индекс признания</div></div><div style="text-align:right"><div class="small muted">Ваш индекс · из 100</div><div class="h1 tnum" style="color:var(--lime)">${index.value}</div><div class="small muted">${index.tier ? esc(index.tier.name) : 'До первой ступени — 60'}</div></div></div>
           <div class="grid g-2 mt-20">${index.parts.map((p) => `<div><div class="bar-label"><span>${esc(p.name)} · ${p.w}%</span><span>${esc(p.now)}</span></div><div class="bar" style="background:rgba(255,255,255,.12)"><i style="width:${Math.round(p.score * 100)}%;background:var(--lime)"></i></div><div class="small muted mt-8">${esc(p.goal)}</div></div>`).join('')}</div>
           <div class="tiers">${tiersHtml}</div>
-          <div class="bonus-calc"><div><div class="small muted">Награда за квартал · СОП</div><div class="v tnum" style="color:var(--lime)">${OM.fmt(sop ? sop.amount : Math.round(index.value / 100 * D.sop.max))} ${OM.coin('coin', 22)}</div></div><div class="grow" style="min-width:180px;max-width:500px"><div class="small">${hint.people.length ? `${hint.people.map((p) => esc(OM.firstName(p))).join(', ')} давно без признания. Отметьте их вклад и поддерживайте регулярность.` : 'Продолжайте замечать вклад каждого — содержательное спасибо тоже считается.'}</div><div class="small muted mt-8">Индекс видите только вы: это не KPI и не оценка. Для награды по СОП директору уходит только итоговый балл. Оценка команды — анонимно, от 5 ответов.</div></div><button class="btn btn-primary" data-scroll="quiet">Кого отметить</button></div>
+          <div class="bonus-calc"><div><div class="small muted">Награда за месяц · СОП</div><div class="v tnum" style="color:var(--lime)">${OM.fmt(sop ? sop.amount : Math.round(index.value / 100 * D.sop.max))} ${OM.coin('coin', 22)}</div></div><div class="grow" style="min-width:180px;max-width:500px"><div class="small">${hint.people.length ? `${hint.people.map((p) => esc(OM.firstName(p))).join(', ')} давно без признания` : 'Продолжайте замечать вклад каждого'}</div></div><button class="btn btn-primary" data-scroll="quiet">Кого отметить</button></div>
           <div class="row-wrap mt-16"><span class="small muted">Куда направить бонус</span><div class="seg" style="color:var(--ink)">${[['me', 'Себе'], ['team', 'В копилку команды']].map(([id, label]) => `<button class="${s.mgr.bonus === id ? 'on' : ''}" data-bonus-to="${id}" ${sop && sop.status === 'issued' ? 'disabled' : ''}>${label}</button>`).join('')}</div></div>
           <div class="small muted mt-12">Копилка команды: ${OM.fmt(OM.shared().teamPool || 0)} Коинов${sop && sop.status === 'issued' ? ' · награда за этот квартал уже начислена' : ''}</div>
-          <p class="small muted mt-12">Награда = индекс / 100 × ${OM.fmt(D.sop.max)} Коинов, после согласования. Пул программы — 2,5 млн Коинов в год; при превышении суммы уменьшаются пропорционально. Неиспользованный фонд переносится до 3 месяцев, затем возвращается в общий пул. Накопленные Коины сотрудников сохраняются.</p>
         </div>
         <div class="grid g-2 mt-20">
           <div class="card" id="quiet"><div class="card-head"><div><div class="card-title">Давно без признания</div><div class="card-sub">Больше 30 дней</div></div><span class="badge badge-warn">${quiet.length}</span></div>${quiet.length ? `<div class="list">${quiet.map(({ p, r }) => `<div class="list-item" style="flex-wrap:wrap"><div class="person-row grow">${OM.ava(p, 40)}<div style="min-width:0"><div class="nm">${esc(p.name)}</div><div class="rl">${esc(p.role)}</div></div></div><span class="badge ${r == null ? 'badge-blue' : 'badge-warn'}">${r == null ? 'ещё не было' : days(r)}</span><button class="btn btn-xs btn-dark" data-act="award" data-who="${p.id}">Наградить</button><button class="btn btn-xs btn-secondary" data-act="thank" data-to="${p.id}" title="Поблагодарить">${OM.icon('heart', 14)}</button></div>`).join('')}</div>` : '<div class="empty"><span class="emoji">🎉</span>Все отмечены</div>'}</div>
-          <div class="card" id="nominees"><div class="card-head"><div><div class="card-title">«Выбор коллег» · номинанты команды</div><div class="card-sub">По голосам всей команды, без связи со «спасибо»</div></div></div>${noms.length ? noms.map(([cat, n]) => { const p = OM.person(n.who); return `<div class="review"><div class="row-wrap">${OM.catBadge(cat)}<span class="small muted">${n.n} из ${n.total} голосов</span></div><div class="row mt-12">${OM.ava(p, 40)}<div><b style="font-weight:500">${esc(p.name)}</b><div class="small muted">«${esc(n.reasons[0] || '')}»</div></div></div><div class="row-wrap mt-12">${n.status === 'wait' ? `<button class="btn btn-sm btn-primary" data-confirm="${cat}" data-ok="1">Подтвердить</button><button class="btn btn-sm btn-ghost" data-confirm="${cat}" data-ok="0">Попросить подробности</button>` : `<span class="badge ${n.status === 'ok' ? 'badge-lime' : 'badge-warn'}">${n.status === 'ok' ? 'Подтверждено · в финале банка' : 'Запрошены подробности'}</span>`}</div></div>`; }).join('') : '<div class="empty"><span class="emoji">🗳️</span>Команда ещё не голосовала</div>'}</div>
+          <div class="card" id="nominees"><div class="card-head"><div><div class="card-title">«Выбор коллег» · номинанты команды</div></div></div>${noms.length ? noms.map(([cat, n]) => { const p = OM.person(n.who); return `<div class="review"><div class="row-wrap">${OM.catBadge(cat)}<span class="small muted">${n.n} из ${n.total} голосов</span></div><div class="row mt-12">${OM.ava(p, 40)}<div><b style="font-weight:500">${esc(p.name)}</b><div class="small muted">«${esc(n.reasons[0] || '')}»</div></div></div><div class="row-wrap mt-12">${n.status === 'wait' ? `<button class="btn btn-sm btn-primary" data-confirm="${cat}" data-ok="1">Подтвердить</button><button class="btn btn-sm btn-ghost" data-confirm="${cat}" data-ok="0">Попросить подробности</button>` : `<span class="badge ${n.status === 'ok' ? 'badge-lime' : 'badge-warn'}">${n.status === 'ok' ? 'Подтверждено · в финале банка' : 'Запрошены подробности'}</span>`}</div></div>`; }).join('') : '<div class="empty"><span class="emoji">🗳️</span>Команда ещё не голосовала</div>'}</div>
         </div>
         <div class="grid g-2 mt-20">
-          <div class="card" data-peer-queue><div class="card-head"><div><div class="card-title">Peer-бонусы</div><div class="card-sub">1 000 Коинов из центрального фонда · раз в квартал</div></div><span class="badge badge-violet">${peers.length}</span></div>${peers.length ? peers.map((p) => `<div class="review"><div class="person-row">${OM.ava(OM.person(p.to), 36)}<div><b style="font-weight:500">${esc(OM.person(p.to).name)}</b><div class="small muted">От ${esc(OM.person(p.from).name)}</div></div></div><p class="small mt-12">${esc(p.note)}</p><div class="row-wrap mt-12"><button class="btn btn-sm btn-primary" data-peer-review="${p.id}" data-ok="1">Подтвердить</button><button class="btn btn-sm btn-ghost" data-peer-review="${p.id}" data-ok="0">Отклонить</button></div></div>`).join('') : '<div class="empty">Все peer-бонусы разобраны</div>'}</div>
-          <div class="card"><div class="card-head"><div class="card-title">Правила признания</div></div><div class="list"><div class="list-item small">Хорошее спасибо отвечает на два вопроса: что сделал и чем помог.</div><div class="list-item small">В охват идёт один зачёт на человека за 30 дней. Повтор одного текста нескольким коллегам не повышает индекс.</div><div class="list-item small">При оценке команды ниже 3,5 доступна только ступень «Замечаю». HRBP выборочно проверяет 5% благодарностей.</div><div class="list-item small">Фонд можно использовать для коллег из других команд, а часть — до 30% — передать тимлидам. За клики и чтение новостей наград нет.</div></div></div>
+          <div class="card"><div class="card-head"><div class="card-title">Правила признания</div></div><div class="list"><div class="list-item small">Хорошее спасибо: что сделал и чем помог</div><div class="list-item small">В охват идёт один зачёт на человека за 30 дней</div><div class="list-item small">При оценке команды ниже 3,5 доступна только ступень «Замечаю»</div><div class="list-item small">До 30% фонда можно передать тимлидам</div></div></div>
         </div>
         ${taskQueue()}
         <section class="section"><div class="section-head"><h2 class="h2">Аналитика</h2></div><div class="grid g-main">
@@ -7347,7 +7328,7 @@ body.is-auth .view { padding: 0; }
         const bonus = e.target.closest('[data-bonus-to]');
         if (bonus) { OM.store.setBonus(bonus.dataset.bonusTo); OM.toast('Направление бонуса сохранено', { icon: 'check' }); return; }
         const cf = e.target.closest('[data-confirm]');
-        if (cf) { OM.store.confirmNominee(cf.dataset.confirm, cf.dataset.ok === '1'); OM.toast(cf.dataset.ok === '1' ? 'Номинант подтверждён и выйдет в финал банка' : 'Запросили у команды подробности', { icon: 'check' }); return; }
+        if (cf) { OM.store.confirmNominee(cf.dataset.confirm, cf.dataset.ok === '1'); OM.toast(cf.dataset.ok === '1' ? 'Номинант подтверждён и выйдет в финал подразделения' : 'Запросили у команды подробности', { icon: 'check' }); return; }
         const peer = e.target.closest('[data-peer-review]');
         if (peer) { OM.store.approvePeer(peer.dataset.peerReview, peer.dataset.ok === '1'); OM.toast(peer.dataset.ok === '1' ? 'Peer-бонус отправлен коллеге' : 'Peer-бонус отклонён', { icon: 'check' }); return; }
         const task = e.target.closest('[data-task-review]');
@@ -7375,10 +7356,10 @@ body.is-auth .view { padding: 0; }
   const kpi = (label, value, sub, pct) => `<div class="card kpi"><span class="small muted">${label}</span>
     <div class="kpi-v">${value}<small>${sub}</small></div><div class="bar"><i style="width:${pct}%"></i></div></div>`;
 
-  // Лимит инициатив: одобренные запросы команд расходуют его сразу
+  // Пул признания: остаток фондов руководителей через 3 месяца; одобренные запросы команд расходуют его сразу
   function initiatives() {
     const approved = A.requests.filter((r) => S().adm.requests[r.id] === 'ok').reduce((a, r) => a + r.amount, 0);
-    const [, used, limit] = A.emission[3];
+    const { used, limit } = A.pool;
     return { used: used + approved / 1e6, limit, free: Math.round((limit - used) * 1e6) - approved };
   }
 
@@ -7386,7 +7367,7 @@ body.is-auth .view { padding: 0; }
 
   function certBatches() {
 
-    return `<div class="card mt-20"><div class="card-head"><div><div class="card-title">Сертификаты: брони и закупка</div><div class="card-sub">Партию распределяем по броням, при нехватке — жребий. Брони — прогноз для закупки</div></div></div>
+    return `<div class="card mt-20"><div class="card-head"><div><div class="card-title">Сертификаты: брони и закупка</div></div></div>
 
       <div class="tbl-wrap"><table class="tbl"><thead><tr><th>Сертификат</th><th>Партия</th><th class="num">Брони</th><th class="num">Докупить</th><th></th></tr></thead><tbody>
 
@@ -7410,7 +7391,7 @@ body.is-auth .view { padding: 0; }
       <div class="kpi-v">${OM.num(shopFree + evFree, 1)} млн ₽<small>свободно</small></div>
       <div class="stack mt-16">${seg(b.paid, 'var(--ink)')}${seg(b.orders, 'var(--violet)')}${seg(b.evUsed, 'var(--blue)')}</div>
       <div class="legend mt-12"><span><i style="background:var(--ink)"></i>Магазин ${OM.num(b.paid, 1)}</span><span><i style="background:var(--violet)"></i>Заказы ${OM.num(b.orders, 1)}</span><span><i style="background:var(--blue)"></i>События ${OM.num(b.evUsed, 1)}</span></div>
-      <div class="small muted mt-8">В магазине свободно ${OM.num(shopFree, 1)} млн ₽ до конца года. Пул событий — ещё ${OM.num(evFree, 1)} млн ₽; что не потрачено, остаётся резервом.</div>
+      <div class="small muted mt-8">В магазине свободно ${OM.num(shopFree, 1)} млн ₽ до конца года. Пул событий — ещё ${OM.num(evFree, 1)} млн ₽</div>
       <div class="bar-label mt-24"><span>${esc(w.name)}</span><span class="muted">${Math.round(w.used * 100)}% из ${OM.num(w.cap, 2)} млн ₽</span></div>
       <div class="bar"><i style="width:${w.used * 100}%"></i></div>
       <div class="small muted mt-8">В очереди ${OM.fmt(w.queue)} ${OM.plural(w.queue, ['заказ', 'заказа', 'заказов'])}</div>
@@ -7420,8 +7401,7 @@ body.is-auth .view { padding: 0; }
 
   function obligations() {
     const st = A.stock;
-    const ini = initiatives();
-    const rows = A.emission.map(([name, used, limit], i) => (i === 3 ? [name, ini.used, limit] : [name, used, limit]));
+    const rows = A.emission.map(([name, used, limit]) => [name, used, limit]);
     const issued = rows.reduce((a, r) => a + r[1], 0);
     const limit = rows.reduce((a, r) => a + r[2], 0);
     return `<div class="card">
@@ -7431,7 +7411,7 @@ body.is-auth .view { padding: 0; }
       <div class="bar"><i style="width:${((st.start - st.now) / (st.start - st.target)) * 100}%"></i></div>
       <div class="bar-label mt-24"><b style="font-weight:500">Новая эмиссия</b><span class="muted">${OM.num(issued)} из ${OM.fmt(limit)} млн</span></div>
       ${rows.map(([name, used, lim]) => `<div class="mt-12"><div class="bar-label"><span>${name}</span><span class="muted tnum">${OM.num(used)} / ${OM.fmt(lim)}</span></div><div class="bar bar-thin"><i style="width:${(used / lim) * 100}%"></i></div></div>`).join('')}
-      <div class="small muted mt-16">Невыданные фонды руководителей — ${OM.num(A.funds)} млн РуКоинов. Накопленные сотрудниками Коины сохраняются; старый фонд возвращается в общий пул после 3 месяцев.</div>
+      <div class="small muted mt-16">Невыданные фонды руководителей — ${OM.num(A.funds)} млн РуКоинов</div>
     </div>`;
   }
 
@@ -7439,7 +7419,7 @@ body.is-auth .view { padding: 0; }
     const done = S().adm.signals;
     const open = A.signals.filter((x) => !done[x.id]).length;
     return `<div class="card">
-      <div class="card-head"><div><div class="card-title">Сигналы</div><div class="card-sub">Только ручная проверка</div></div>${open ? `<span class="badge badge-warn">${open}</span>` : ''}</div>
+      <div class="card-head"><div><div class="card-title">Сигналы</div></div>${open ? `<span class="badge badge-warn">${open}</span>` : ''}</div>
       ${A.signals.map((x) => `<div class="req">
         <span class="ava-stack">${x.who.map((id) => OM.ava(OM.person(id), 36)).join('')}</span>
         <div class="grow"><b style="font-weight:500">${esc(x.title)}</b><div class="small muted">${esc(x.text)}</div></div>
@@ -7451,7 +7431,7 @@ body.is-auth .view { padding: 0; }
   function requests() {
     const done = S().adm.requests;
     return `<div class="card">
-      <div class="card-head"><div><div class="card-title">Запросы команд</div><div class="card-sub">${esc(A.requestRules)}</div></div><span class="muted small">свободно ${OM.fmt(initiatives().free)}</span></div>
+      <div class="card-head"><div><div class="card-title">Запросы команд</div></div><span class="muted small">свободно ${OM.fmt(initiatives().free)}</span></div>
       ${A.requests.map((r) => `<div class="req">
         ${OM.ava(OM.person(r.from), 36)}
         <div class="grow"><b style="font-weight:500">${esc(r.team)}</b><div class="small muted">${esc(r.what)}</div>${r.rule ? `<div class="small mt-8" style="color:var(--warn)">${OM.icon('info', 14)} ${esc(r.rule)}</div>` : ''}
@@ -7484,23 +7464,23 @@ body.is-auth .view { padding: 0; }
 
   function managerIndex() {
     const m = A.managers;
-    return `<div class="card"><div class="card-head"><div><div class="card-title">Индекс признания руководителей</div><div class="card-sub">Публично показываем только лидеров; остальные оценки доступны руководителю и N+1</div></div></div><div class="list">${m.tiers.map(([name, n]) => `<div class="list-item"><div class="grow">${esc(name)}</div><b style="font-weight:500">${n}</b><span class="small muted">${Math.round(n / m.total * 100)}%</span></div>`).join('')}</div><div class="bar-label mt-20"><span>Пул за год</span><span>${OM.num(m.pool)} / ${OM.num(m.poolMax)} млн Коинов</span></div><div class="bar"><i style="width:${m.pool / m.poolMax * 100}%"></i></div><div class="small muted mt-12">Центральный фонд. Сумма выданных команде наград не повышает индекс.</div></div>`;
+    return `<div class="card"><div class="card-head"><div><div class="card-title">Индекс признания руководителей</div></div></div><div class="list">${m.tiers.map(([name, n]) => `<div class="list-item"><div class="grow">${esc(name)}</div><b style="font-weight:500">${n}</b><span class="small muted">${Math.round(n / m.total * 100)}%</span></div>`).join('')}</div><div class="bar-label mt-20"><span>Пул за год</span><span>${OM.num(m.pool)} / ${OM.num(m.poolMax)} млн Коинов</span></div><div class="bar"><i style="width:${m.pool / m.poolMax * 100}%"></i></div></div>`;
   }
 
   function sopRewards() {
     const candidates = OM.store.sopCandidates();
-    return `<div class="card" data-sop-panel><div class="card-head"><div><div class="card-title">Награды кураторам и руководителям</div><div class="card-sub">Оценка за квартал → согласование → начисление</div></div><span class="badge badge-violet">СОП · демо</span></div><p class="small muted">Пропорциональная награда: оценка / 100 × ${OM.fmt(D.sop.max)} Коинов. Лимит — ${OM.num(D.sop.pool / 1e6)} млн в год внутри центрального фонда. Ступени индекса определяют статус; выплата одна, пропорционально оценке.</p><div class="list mt-16">${candidates.map((c) => { const self = c.id === OM.meId, eligible = !self && (c.id !== 'eva' || OM.account.canApproveSop); return `<div class="list-item" style="flex-wrap:wrap"><div class="grow" style="min-width:180px"><b style="font-weight:500">${esc(c.name)}</b><div class="small muted">${esc(c.role)} · оценка ${c.score} / 100${c.destination === 'team' ? ' · в копилку команды' : ''}</div></div><div>${OM.money(c.amount, 'coin', 20)}</div>${c.status === 'issued' ? '<span class="badge badge-soft">Начислено за квартал</span>' : `<button class="btn btn-sm btn-primary" data-sop-award="${c.id}" ${eligible ? '' : 'disabled'}>${eligible ? 'Согласовать награду' : 'Согласует N+1'}</button>`}</div>`; }).join('')}</div><p class="small muted mt-16">Куратор не согласует собственную выплату. В демо награду Еве подтверждает директор Ирина. Подключение к банковской СОП — отдельный этап внедрения.</p></div>`;
+    return `<div class="card" data-sop-panel><div class="card-head"><div><div class="card-title">Награды кураторам и руководителям</div></div><span class="badge badge-violet">СОП · демо</span></div><div class="list">${candidates.map((c) => { const self = c.id === OM.meId, eligible = !self && (c.id !== 'eva' || OM.account.canApproveSop); return `<div class="list-item" style="flex-wrap:wrap"><div class="grow" style="min-width:180px"><b style="font-weight:500">${esc(c.name)}</b><div class="small muted">${esc(c.role)} · оценка ${c.score} / 100${c.destination === 'team' ? ' · в копилку команды' : ''}</div></div><div>${OM.money(c.amount, 'coin', 20)}</div>${c.status === 'issued' ? '<span class="badge badge-soft">Начислено за месяц</span>' : `<button class="btn btn-sm btn-primary" data-sop-award="${c.id}" ${eligible ? '' : 'disabled'}>${eligible ? 'Согласовать награду' : 'Согласует N+1'}</button>`}</div>`; }).join('')}</div></div>`;
   }
 
   function eventRequests() {
     const rows = OM.store.eventRequests();
     const labels = { review: 'На рассмотрении', approved: 'Одобрено', rejected: 'Отклонено' };
-    return `<section class="section" id="event-requests"><div class="section-head"><div><h2 class="h2">Поддержка мероприятий и поездок</h2><div class="muted mt-8">Инициативы сотрудников · банк организует, участники получают билеты за Коины</div></div></div><div class="card">${rows.length ? rows.map((r) => `<div class="req"><div class="grow" style="min-width:180px"><div class="row-wrap"><span class="badge ${r.type === 'trip' ? 'badge-violet' : 'badge-blue'}">${r.type === 'trip' ? 'Поездка' : 'Мероприятие'}</span><b style="font-weight:500">${esc(r.title)}</b></div><div class="small muted mt-8">${esc(OM.person(r.from).name)} · ${esc(r.city)} · ${esc(r.date)} · ${r.seats} мест</div><p class="small mt-8">${esc(r.purpose)}</p><div class="small muted mt-8">Стоимость места ${OM.fmt(r.costRub)} ₽ · билет ${OM.fmt(r.price)} Коинов · 1 ₽ = 10 Коинов. Премиум-категория с отдельной ценой.</div></div>${r.status === 'review' ? `<div class="row-wrap"><button class="btn btn-sm btn-primary" data-event-review="${r.id}" data-ok="1" ${r.from === OM.meId ? 'disabled' : ''}>${r.from === OM.meId ? 'Подтвердит другой куратор' : 'Поддержать и открыть билеты'}</button><button class="btn btn-sm btn-ghost" data-event-review="${r.id}" data-ok="0" ${r.from === OM.meId ? 'disabled' : ''}>Отклонить</button></div>` : `<span class="badge ${r.status === 'approved' ? 'badge-soft' : 'badge-gray'}">${labels[r.status]}</span>`}</div>`).join('') : '<div class="empty">Запросы сотрудников появятся здесь. Создать инициативу можно в магазине.</div>'}<div class="story mt-16"><p class="small">Согласование в течение 5 рабочих дней. Перед одобрением проверяем пользу для команды, смету и места в бюджете мероприятий. После события — короткий отчёт. Основной курс и накопленные балансы сохраняются.</p></div></div></section>`;
+    return `<section class="section" id="event-requests"><div class="section-head"><div><h2 class="h2">Поддержка мероприятий и поездок</h2></div></div><div class="card">${rows.length ? rows.map((r) => `<div class="req"><div class="grow" style="min-width:180px"><div class="row-wrap"><span class="badge ${r.type === 'trip' ? 'badge-violet' : 'badge-blue'}">${r.type === 'trip' ? 'Поездка' : 'Мероприятие'}</span><b style="font-weight:500">${esc(r.title)}</b></div><div class="small muted mt-8">${esc(OM.person(r.from).name)} · ${esc(r.city)} · ${esc(r.date)} · ${r.seats} мест</div><p class="small mt-8">${esc(r.purpose)}</p><div class="small muted mt-8">Стоимость места ${OM.fmt(r.costRub)} ₽ · билет ${OM.fmt(r.price)} Коинов</div></div>${r.status === 'review' ? `<div class="row-wrap"><button class="btn btn-sm btn-primary" data-event-review="${r.id}" data-ok="1" ${r.from === OM.meId ? 'disabled' : ''}>${r.from === OM.meId ? 'Подтвердит другой куратор' : 'Поддержать и открыть билеты'}</button><button class="btn btn-sm btn-ghost" data-event-review="${r.id}" data-ok="0" ${r.from === OM.meId ? 'disabled' : ''}>Отклонить</button></div>` : `<span class="badge ${r.status === 'approved' ? 'badge-soft' : 'badge-gray'}">${labels[r.status]}</span>`}</div>`).join('') : '<div class="empty">Запросы сотрудников появятся здесь</div>'}</div></section>`;
   }
 
   function taskReviews() {
     const list = OM.store.tasks().filter((t) => t.status === 'review');
-    return `<section class="section"><div class="section-head"><h2 class="h2">Результаты задач на проверке</h2><span class="badge badge-violet">${list.length}</span></div><div class="card">${list.length ? list.map((t) => `<div class="req"><div class="grow"><b style="font-weight:500">${esc(t.title)}</b><div class="small muted">${esc(OM.person(t.who).name)} · ${t.category === 'social' ? 'Социальный вклад' : 'Профессиональный вклад'}</div><p class="small mt-8">${esc(t.evidence)}</p></div>${OM.money(t.amount, 'ru', 20)}<div class="row-wrap"><button class="btn btn-sm btn-primary" data-task-review="${t.id}" data-ok="1" ${t.who === OM.meId ? 'disabled' : ''}>${t.who === OM.meId ? 'Подтвердит N+1' : 'Подтвердить результат'}</button><button class="btn btn-sm btn-ghost" data-task-review="${t.id}" data-ok="0" ${t.who === OM.meId ? 'disabled' : ''}>На доработку</button></div></div>`).join('') : '<div class="empty">Все результаты проверены</div>'}</div></section>`;
+    return `<section class="section"><div class="section-head"><h2 class="h2">Результаты задач на проверке</h2><span class="badge badge-violet">${list.length}</span></div><div class="card">${list.length ? list.map((t) => `<div class="req"><div class="grow"><b style="font-weight:500">${esc(t.title)}</b><div class="small muted">${esc(OM.person(t.who).name)}</div><p class="small mt-8">${esc(t.evidence)}</p></div>${OM.money(t.amount, 'ru', 20)}<div class="row-wrap"><button class="btn btn-sm btn-primary" data-task-review="${t.id}" data-ok="1" ${t.who === OM.meId ? 'disabled' : ''}>${t.who === OM.meId ? 'Подтвердит N+1' : 'Подтвердить результат'}</button><button class="btn btn-sm btn-ghost" data-task-review="${t.id}" data-ok="0" ${t.who === OM.meId ? 'disabled' : ''}>На доработку</button></div></div>`).join('') : '<div class="empty">Все результаты проверены</div>'}</div></section>`;
   }
 
   function peerReviews() {
@@ -7509,35 +7489,42 @@ body.is-auth .view { padding: 0; }
   }
 
   const sim = Object.assign({}, A.sim);
-  // Тот же помесячный расчёт, что в финмодели (лист «Поток_36м»): спрос — доля свободных коинов,
-  // магазин — не больше окна, события — по курсу 1:10, лишний спрос ждёт в брони.
+  // Тот же помесячный расчёт, что в финмодели (лист «Поток_36м»): спрос — доля свободных коинов; магазин — не больше окна;
+  // фонд событий — по курсу 1:10 с первого месяца; неудовлетворённый спрос частично переходит между магазином и событиями,
+  // остальное ждёт в брони; нематериальные награды — доля трат, бюджету не стоят ничего.
   function simRun(s) {
-    const rate = 5, keff = 1.03, S0 = 160, E = 95.2 / 12, evB = 33 - s.shop;
-    const ramp = (t) => (t <= 12 ? [0, 0.25, 0.5, 0.6][Math.floor((t - 1) / 3)] : t <= 24 ? 0.7 : 0.8);
-    const p = s.p / 100, e = s.e / 100, v = s.v / 100;
-    let S = S0, Q = 0;
+    const rate = 5, S0 = 160, evB = 33 - s.shop, win = (s.shop / 12) * rate, sigma = 0.5;
+    const E = [177.93, 180.19, 180.87].map((x) => (x + 65.1 * (s.tc / 100 - 1)) / 12);
+    const p = s.p / 100, nm = s.v / 100, alpha = 1 - s.e / 100;
+    let S = S0, Q = 0, evY = 0;
     const out = { stock: [S0 / rate], cash: [0, 0, 0], qmax: 0 };
     for (let t = 1; t <= 36; t++) {
-      const L = p * (S + E - Q);
-      const ev = Math.min(e * L, (evB / 12) * s.prem * ramp(t));
-      const dem = (1 - v - e) * L + Q + (t === 1 ? (s.rush / 100) * S0 : 0);
-      const shop = Math.min(dem, ((s.shop / 12 + Math.max(0, evB / 12 - ev / s.prem)) / keff) * rate);
-      Q = dem - shop;
-      S = S + E - v * L - ev - shop;
-      out.cash[Math.floor((t - 1) / 12)] += (shop * keff) / rate + ev / s.prem;
-      out.qmax = Math.max(out.qmax, Q / ((s.shop / 12 / keff) * rate));
-      if (t % 12 === 0) out.stock.push(S / rate);
+      const y = Math.floor((t - 1) / 12), m = t - y * 12;
+      if (m === 1) evY = 0;
+      const F = Math.max(0, S + E[y] - Q), M = p * F;
+      const N = alpha * (1 - nm) * M + Q, O = (1 - alpha) * (1 - nm) * M;
+      const cap = Math.max(0, (evB * s.prem * m) / 12 - evY);
+      const r0 = Math.min(N, win), s0 = Math.min(O, cap);
+      const toEv = Math.min(sigma * (N - r0), cap - s0), toSh = Math.min(sigma * (O - s0), win - r0);
+      const shop = r0 + toSh, ev = s0 + toEv;
+      Q = N - r0 - toEv;
+      const nmv = Math.max(0, Math.min((nm / (1 - nm)) * (shop + ev), S + E[y] - shop - ev));
+      S = S + E[y] - shop - ev - nmv;
+      evY += ev;
+      out.cash[y] += shop / rate + ev / s.prem;
+      out.qmax = Math.max(out.qmax, Q / win);
+      if (m === 12) out.stock.push(S / rate);
     }
     return out;
   }
   function simResults() {
     const r = simRun(sim);
     const points = [['Сейчас', r.stock[0]]].concat([1, 2, 3].map((y) => [String(A.year + y - 1), Math.round(r.stock[y] * 10) / 10]));
-    return `<div class="chart">${OM.charts.line({ data: points, yMax: Math.max(40, ...points.map((p) => p[1])) + 4, fmt: (v) => OM.num(v, 1) + ' млн', tick: (v) => OM.num(v, 0), label: 'Остаток коинов на счетах, млн ₽ по номиналу' })}</div><div class="grid g-3 mt-16"><div><div class="small muted">Остаток через 3 года</div><b class="h3">${OM.num(r.stock[3], 1)} млн ₽</b><div class="small muted">без изменений — 51 млн ₽</div></div><div><div class="small muted">Касса по годам, млн ₽</div><b class="h3 tnum">${r.cash.map((c) => OM.num(c, 1)).join(' · ')}</b><div class="small muted">бюджет — 33 в год</div></div><div><div class="small muted">Очередь в магазине</div><b class="h3">${r.qmax < 0.05 ? 'нет' : OM.num(r.qmax, 1) + ' мес.'}</b><div class="small muted">максимум, в окнах магазина</div></div></div><p class="small muted mt-16">Каждый месяц сотрудники тратят часть свободных коинов: в магазине — 5 коинов за 1 ₽ и не больше окна, на события сообществ — 10 за 1 ₽, часть — без денег. Лишний спрос ждёт в брони. Формулы — как в финмодели. Накопленные Коины не сгорают.</p>`;
+    return `<div class="chart">${OM.charts.line({ data: points, yMax: Math.max(40, ...points.map((p) => p[1])) + 4, fmt: (v) => OM.num(v, 1) + ' млн', tick: (v) => OM.num(v, 0), label: 'Остаток коинов на счетах, млн ₽ по номиналу' })}</div><div class="grid g-3 mt-16"><div><div class="small muted">Остаток через 3 года</div><b class="h3">${OM.num(r.stock[3], 1)} млн ₽</b><div class="small muted">без изменений — 41 млн ₽</div></div><div><div class="small muted">Касса по годам, млн ₽</div><b class="h3 tnum">${r.cash.map((c) => OM.num(c, 1)).join(' · ')}</b><div class="small muted">бюджет — 33 в год</div></div><div><div class="small muted">Ждут сертификатов</div><b class="h3">${r.qmax < 0.05 ? 'нет' : OM.num(r.qmax, 1) + ' мес.'}</b><div class="small muted">максимум, месяцев окна магазина</div></div></div>`;
   }
   function simulator() {
-    const inputs = [['p', 'Тратят в месяц, % свободных коинов', 4, 20, 1], ['e', 'Траты на события сообществ, %', 0, 40, 1], ['v', 'Траты без денег, %', 0, 30, 1], ['prem', 'Курс событий, коинов за 1 ₽', 5, 15, 1], ['shop', 'Магазин в бюджете 33, млн ₽', 20, 30, 1], ['rush', 'Рывок после запуска, % остатка', 0, 40, 5]];
-    return `<section class="section"><div class="section-head"><div><h2 class="h2">Симулятор экономики</h2><div class="muted mt-8">Сценарий для обсуждения · значения ползунков не меняют реальные балансы</div></div></div><div class="grid g-main"><div class="card" data-sim-results>${simResults()}</div><div class="card"><div class="col" style="gap:20px">${inputs.map(([id, label, min, max, step]) => `<label class="field"><span class="bar-label"><span>${label}</span><b class="tnum" data-sim-value="${id}">${OM.num(sim[id], 0)}</b></span><input type="range" min="${min}" max="${max}" step="${step}" value="${sim[id]}" data-sim="${id}" aria-label="${label}" style="width:100%;accent-color:var(--lime-ink)"></label>`).join('')}</div><p class="small muted mt-20">База: остаток 32 → 20,8 → 16,1 → 14,8 млн ₽, касса 25,2 → 18,8 → 16,2 при бюджете 33 = магазин 25 + события 8. IT финансируется отдельно от наград.</p></div></div></section>`;
+    const inputs = [['p', 'Хотят потратить в месяц, % свободных коинов', 10, 100, 5], ['e', 'Доля событий в денежном спросе, %', 0, 60, 5], ['v', 'Нематериальные награды, % трат', 0, 30, 1], ['prem', 'Курс событий, коинов за 1 ₽', 5, 15, 1], ['shop', 'Магазин в бюджете 33, млн ₽', 20, 30, 1], ['tc', '«Выбор коллег»: награды, % к правилам', 50, 150, 10]];
+    return `<section class="section"><div class="section-head"><div><h2 class="h2">Симулятор экономики</h2></div></div><div class="grid g-main"><div class="card" data-sim-results>${simResults()}</div><div class="card"><div class="col" style="gap:20px">${inputs.map(([id, label, min, max, step]) => `<label class="field"><span class="bar-label"><span>${label}</span><b class="tnum" data-sim-value="${id}">${OM.num(sim[id], 0)}</b></span><input type="range" min="${min}" max="${max}" step="${step}" value="${sim[id]}" data-sim="${id}" aria-label="${label}" style="width:100%;accent-color:var(--lime-ink)"></label>`).join('')}</div></div></div></section>`;
   }
 
   OM.views.admin = {
@@ -7554,8 +7541,8 @@ body.is-auth .view { padding: 0; }
         </div>
         <div class="grid g-3 mt-20">
           ${kpi('Вовлечённость · ER', `${k.er}%`, `было ${k.erBase}% · цель ${k.erGoal}%`, k.er)}
-          ${kpi('Активные руководители', `${A.managers.active} из ${A.managers.total}`, `отметили коллег за месяц · цель 80%`, A.managers.active / A.managers.total * 100)}
-          ${kpi('Действовали за 30 дней', '47%', 'заходили 89% · поблагодарили, голосовали, получили признание или потратили', 47)}
+          ${kpi('Активные руководители', `${A.managers.active} из ${A.managers.total}`, `цель 80%`, A.managers.active / A.managers.total * 100)}
+          ${kpi('Действовали за 30 дней', '47%', 'заходили 89%', 47)}
         </div>
         <div class="grid g-2 mt-20">${budget()}${obligations()}</div>
         <div class="grid g-2 mt-20">${signals()}${requests()}</div>
@@ -7563,7 +7550,6 @@ body.is-auth .view { padding: 0; }
         ${certBatches()}
         ${eventRequests()}
         ${taskReviews()}
-        ${peerReviews()}
         ${simulator()}
       </div>`;
     },
@@ -7591,7 +7577,7 @@ body.is-auth .view { padding: 0; }
         const r = A.requests.find((x) => x.id === rq.dataset.req);
         const ok = rq.dataset.ok === '1';
         if (ok && (r.rule || r.amount > A.requestMax)) { OM.toast(r.rule || 'Выше потолка заявки', { icon: 'info' }); return; }
-        if (ok && r.amount > initiatives().free) { OM.toast('Не хватает фонда командных инициатив', { icon: 'info' }); return; }
+        if (ok && r.amount > initiatives().free) { OM.toast('В пуле признания не хватает коинов', { icon: 'info' }); return; }
         OM.store.decideRequest(r.id, ok);
         OM.toast(ok ? `Одобрено: ${OM.fmt(r.amount)} Коинов` : 'Запрос отклонён', { icon: ok ? 'check' : 'x' });
       });
@@ -7669,7 +7655,7 @@ body.is-auth .view { padding: 0; }
         </div>
         <div class="section-head mt-24"><h2 class="h3">Зоны</h2><span class="small muted" data-route-count>${routeCount()}</span></div>
         <div class="zone-cards" data-zones>${zoneCards()}</div>
-        <div class="grid g-2 mt-20"><div class="card"><div class="card-title">Офис — весь банк</div><p class="muted mt-12">Коллеги из регионов участвуют в признании наравне с головным офисом. Найдите специалистов по городу, соберите сообщество или предложите встречу.</p><div class="row-wrap mt-16"><a class="btn btn-secondary" href="#/colleagues">Коллеги в регионах</a><button class="btn btn-primary" data-act="supportRequest">Предложить мероприятие</button></div></div><div class="card"><div class="card-title">Уникальный опыт</div><p class="muted mt-12">Встреча с руководителем, место на стратсессии и другие редкие лоты — за накопленные Коины.</p><a class="btn btn-secondary mt-16" href="#/shop" data-auction-link>Зал аукционов</a></div></div>
+        <div class="grid g-2 mt-20"><div class="card"><div class="card-title">Офис — весь банк</div><div class="row-wrap mt-16"><a class="btn btn-secondary" href="#/colleagues">Коллеги в регионах</a><button class="btn btn-primary" data-act="supportRequest">Предложить мероприятие</button></div></div><div class="card"><div class="card-title">Уникальный опыт</div><a class="btn btn-secondary mt-16" href="#/shop" data-auction-link>Зал аукционов</a></div></div>
       </div>`;
     },
     mount(el) {
@@ -7745,7 +7731,7 @@ body.is-auth .view { padding: 0; }
     const tone = a.canAdmin ? 'badge-lime' : a.canManage ? 'badge-dark' : a.id === 'timur' ? 'badge-blue' : 'badge-violet';
     return `<button class="acc" data-login="${a.id}">
       ${OM.ava(p, 52, { title: false })}
-      <span class="grow"><span class="acc-top"><b>${esc(p.name)}</b><span class="badge ${tone}">${esc(a.badge)}</span></span><small>${esc(sso ? a.login : a.about)}</small></span>
+      <span class="grow"><span class="acc-top"><b>${esc(p.name)}</b><span class="badge ${tone}">${esc(a.badge)}</span></span>${sso ? `<small>${esc(a.login)}</small>` : ''}</span>
       ${OM.icon('arrow', 18)}
     </button>`;
   }
